@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.lruihao.cn/"/>
-  <updated>2018-08-20T11:48:34.292Z</updated>
+  <updated>2018-08-21T14:22:20.576Z</updated>
   <id>https://www.lruihao.cn/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hexo d 出错</title>
+    <link href="https://www.lruihao.cn/hexo-d-error.html"/>
+    <id>https://www.lruihao.cn/hexo-d-error.html</id>
+    <published>2018-08-21T14:15:01.000Z</published>
+    <updated>2018-08-21T14:22:20.576Z</updated>
+    
+    <content type="html"><![CDATA[<p>搭建这个博客以来，隔一段时间就出现一次部署失败的错误，每次都差不多，莫名其妙地出现的。。。前几次不知道怎么瞎搞就好了。<br>现在做一下记录，防止以后出错用。<br>错误如下<br></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">Connection reset by 13.229.188.59 port 22</span><br><span class="line">fatal: sha1 file &apos;&lt;stdout&gt;&apos; write error: Broken pipe</span><br><span class="line">fatal: The remote end hung up unexpectedly</span><br><span class="line">fatal: The remote end hung up unexpectedly</span><br><span class="line">FATAL Something&apos;s wrong. Maybe you can find the solution here: http://hexo.io/docs/troubleshooting.html</span><br><span class="line">Error: Connection reset by 13.229.188.59 port 22</span><br><span class="line">fatal: sha1 file &apos;&lt;stdout&gt;&apos; write error: Broken pipe</span><br><span class="line">fatal: The remote end hung up unexpectedly</span><br><span class="line">fatal: The remote end hung up unexpectedly</span><br><span class="line"></span><br><span class="line">at ChildProcess.&lt;anonymous&gt; (H:\Hexo\node_modules\hexo-util\lib\spawn.js:37:17)</span><br><span class="line">    at emitTwo (events.js:106:13)</span><br><span class="line">    at ChildProcess.emit (events.js:191:7)</span><br><span class="line">    at ChildProcess.cp.emit (H:\Hexo\node_modules\cross-spawn\lib\enoent.js:40:29)</span><br><span class="line">    at maybeClose (internal/child_process.js:850:16)</span><br><span class="line">    at Socket.&lt;anonymous&gt; (internal/child_process.js:323:11)</span><br><span class="line">    at emitOne (events.js:96:13)</span><br><span class="line">    at Socket.emit (events.js:188:7)</span><br><span class="line">    at Pipe._handle.close [as _onclose] (net.js:492:12)</span><br><span class="line"></span><br><span class="line">...</span><br></pre></td></tr></table></figure><p></p><p>确保ssh正常，hexo-deploy-git插件正常的情况下删除.deploy_git文件夹就好了。<br>最好吐槽一下，这个鬼错误，搞我一晚上醉了。。。我又打算重装了的。。。。。/吐血</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;搭建这个博客以来，隔一段时间就出现一次部署失败的错误，每次都差不多，莫名其妙地出现的。。。前几次不知道怎么瞎搞就好了。&lt;br&gt;现在做一下记录，防止以后出错用。&lt;br&gt;错误如下&lt;br&gt;&lt;/p&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr
+      
+    
+    </summary>
+    
+      <category term="hexo博客" scheme="https://www.lruihao.cn/categories/hexo%E5%8D%9A%E5%AE%A2/"/>
+    
+    
+      <category term="hexo博客" scheme="https://www.lruihao.cn/tags/hexo%E5%8D%9A%E5%AE%A2/"/>
+    
+      <category term="前端" scheme="https://www.lruihao.cn/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
   
   <entry>
     <title>hexo个性化-next主题动态显示subtitle</title>
@@ -557,30 +584,6 @@
       <category term="生活随笔" scheme="https://www.lruihao.cn/tags/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/"/>
     
       <category term="sth for fu&amp;king acm" scheme="https://www.lruihao.cn/tags/sth-for-fu-king-acm/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>牛客暑假多校第五场</title>
-    <link href="https://www.lruihao.cn//nowcodersummer-5th.html"/>
-    <id>https://www.lruihao.cn//nowcodersummer-5th.html</id>
-    <published>2018-08-02T13:27:02.000Z</published>
-    <updated>2018-08-02T13:32:56.872Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="链接：https://pan.baidu.com/s/1VP9Wn0OF4SVaqEVwpNralA">题目链接 密码：l9sn</a><br>终于不爆零了，但是还是wa了无数次，有时候代码感觉都差不多</p><a id="more"></a><h4 id="G-max"><a href="#G-max" class="headerlink" title="G-max"></a>G-max</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">//wa</span></span><br><span class="line"><span class="comment">#include&lt;bits/stdc++.h&gt;</span></span><br><span class="line"><span class="comment">using namespace std;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">int main()&#123;</span></span><br><span class="line"><span class="comment">    int n,c;//好像不会爆int吧，头晕</span></span><br><span class="line"><span class="comment">    cin&gt;&gt;c&gt;&gt;n;</span></span><br><span class="line"><span class="comment">    int t=n/c;</span></span><br><span class="line"><span class="comment">    if(t&lt;1) cout&lt;&lt;"-1\n";//</span></span><br><span class="line"><span class="comment">    else if(t==1) cout&lt;&lt;c*c&lt;&lt;endl;</span></span><br><span class="line"><span class="comment">    else cout&lt;&lt;(t*c)*((t-1)*c)&lt;&lt;endl;</span></span><br><span class="line"><span class="comment">return 0;</span></span><br><span class="line"><span class="comment">&#125;*/</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//AC</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">long</span> <span class="keyword">long</span> n,c;</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;c&gt;&gt;n;</span><br><span class="line">    <span class="keyword">long</span> <span class="keyword">long</span> t=n/c;</span><br><span class="line">    <span class="keyword">if</span>(t&lt;<span class="number">1</span>) <span class="built_in">cout</span>&lt;&lt;<span class="number">-1</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(t==<span class="number">1</span>) <span class="built_in">cout</span>&lt;&lt;c*c&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">else</span> <span class="built_in">cout</span>&lt;&lt;(t*c)*((t<span class="number">-1</span>)*c)&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h4 id="J-plan"><a href="#J-plan" class="headerlink" title="J-plan"></a>J-plan</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*枚举所有情况</span></span><br><span class="line"><span class="comment">全买双人n%2  0 or 1//剩1个人的时候，可以多开一间房或者退一间2人房开一间3人房</span></span><br><span class="line"><span class="comment">全买3人n%3  0 or 1 or 2</span></span><br><span class="line"><span class="comment">再比较大小</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> INF 1&lt;&lt;20</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"></span><br><span class="line"><span class="function">ll <span class="title">min</span><span class="params">(ll a,ll b)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a&lt;b?a:b;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    ll n,p2,p3,sum,sum1;</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">cin</span>&gt;&gt;n&gt;&gt;p2&gt;&gt;p3)&#123;</span><br><span class="line">        <span class="keyword">if</span>(n%<span class="number">2</span>==<span class="number">0</span>)</span><br><span class="line">            sum=p2*(n/<span class="number">2</span>);</span><br><span class="line">        <span class="keyword">else</span> sum=p2*(n/<span class="number">2</span>)+min(min(p2,p3),p3-p2);<span class="comment">//退二买三；</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(n%<span class="number">3</span>==<span class="number">0</span>)</span><br><span class="line">            sum1=p3*(n/<span class="number">3</span>);</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(n%<span class="number">3</span>==<span class="number">1</span>) sum1=p3*(n/<span class="number">3</span>)+min(min(p2,p3),<span class="number">2</span>*p2-p3);<span class="comment">//退3买2*2</span></span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(n%<span class="number">3</span>==<span class="number">2</span>) sum1=p3*(n/<span class="number">3</span>)+min(p3,p2);<span class="comment">//退3买3*2</span></span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;min(sum1,sum)&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;a href=&quot;链接：https://pan.baidu.com/s/1VP9Wn0OF4SVaqEVwpNralA&quot;&gt;题目链接 密码：l9sn&lt;/a&gt;&lt;br&gt;终于不爆零了，但是还是wa了无数次，有时候代码感觉都差不多&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="ACM" scheme="https://www.lruihao.cn/categories/ACM/"/>
-    
-    
-      <category term="ACM" scheme="https://www.lruihao.cn/tags/ACM/"/>
-    
-      <category term="Nowcoder" scheme="https://www.lruihao.cn/tags/Nowcoder/"/>
     
   </entry>
   
