@@ -5,9 +5,9 @@
   <subtitle>不怕万人阻挡，只怕自己投降。W你如何回忆，决定你是一个怎样的人。W人生当苦无妨，良人当归即可。W世间文字八万个，唯有情字最杀人。W逝者如斯乎，不舍昼夜。W你别出现在我黎明的梦里，我怕我醒来就抱不到你。</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https://www.lruihao.cn/"/>
+  <link href="https://lruihao.cn/"/>
   <updated>2018-08-22T11:31:20.261Z</updated>
-  <id>https://www.lruihao.cn/</id>
+  <id>https://lruihao.cn/</id>
   
   <author>
     <name>李瑞豪</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>hexo d 出错</title>
-    <link href="https://www.lruihao.cn/hexo-d-error.html"/>
-    <id>https://www.lruihao.cn/hexo-d-error.html</id>
+    <link href="https://lruihao.cn/hexo-d-error.html"/>
+    <id>https://lruihao.cn/hexo-d-error.html</id>
     <published>2018-08-21T14:15:01.000Z</published>
     <updated>2018-08-22T11:31:20.261Z</updated>
     
@@ -31,23 +31,23 @@
     
     </summary>
     
-      <category term="hexo博客" scheme="https://www.lruihao.cn/categories/hexo%E5%8D%9A%E5%AE%A2/"/>
+      <category term="hexo博客" scheme="https://lruihao.cn/categories/hexo%E5%8D%9A%E5%AE%A2/"/>
     
     
-      <category term="hexo博客" scheme="https://www.lruihao.cn/tags/hexo%E5%8D%9A%E5%AE%A2/"/>
+      <category term="hexo博客" scheme="https://lruihao.cn/tags/hexo%E5%8D%9A%E5%AE%A2/"/>
     
-      <category term="前端" scheme="https://www.lruihao.cn/tags/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="https://lruihao.cn/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
   <entry>
     <title>hexo个性化-next主题动态显示subtitle</title>
-    <link href="https://www.lruihao.cn/dongtaisub.html"/>
-    <id>https://www.lruihao.cn/dongtaisub.html</id>
+    <link href="https://lruihao.cn/dongtaisub.html"/>
+    <id>https://lruihao.cn/dongtaisub.html</id>
     <published>2018-08-20T08:16:40.000Z</published>
     <updated>2018-08-23T07:51:10.347Z</updated>
     
-    <content type="html"><![CDATA[<div class="note"><p>本文适合我这种纯小白。<br>目前为止，全网也就只有一个博主写到过这样动态显示subtitle的文章。<a href="https://www.jianshu.com/p/df2c844eeabf" rel="external nofollow noopener noreferrer" target="_blank">传送门</a>（关键词：js,后加载）<br>但是嘞，该博写的不怎么详细，17年底写的。当然更大的可能是next更新了一些文件结构，所以不适合现在使用了。以前我按原博的流程配置了一下没成功就搁在那里了，今天突然心血来潮。翻了翻原博主博客的源码，再与自己的对比了一下，发现了一些端倪。稍作调整后如下：</p></div><h2 id="修改站点配置文件，主要修改subtitle"><a href="#修改站点配置文件，主要修改subtitle" class="headerlink" title="修改站点配置文件，主要修改subtitle"></a>修改站点配置文件，主要修改subtitle</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">subtitle: 不怕万人阻挡，只怕自己投降。W你如何回忆，决定你是一个怎样的人！W人生当苦无妨，良人当归即可。W世间文字八万个，唯有情字最杀人。W逝者如斯乎，不舍昼夜。</span><br></pre></td></tr></table></figure><p>句子与句子之间以W分割，后续需要根据该标志位去拆分句子组。</p><h2 id="修改themes-next-layout-partials-header下面的index-swig文件。"><a href="#修改themes-next-layout-partials-header下面的index-swig文件。" class="headerlink" title="修改themes\next\layout_partials\header下面的index.swig文件。"></a>修改themes\next\layout_partials\header下面的index.swig文件。</h2><p>在最开头添加如下代码：<br>(这里用的原博的js)</p><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line"> <span class="function">function <span class="title">GetRandomNum</span><span class="params">(Min,Max)</span></span></span><br><span class="line"><span class="function">  </span>&#123;</span><br><span class="line">    var Range = Max - Min;</span><br><span class="line">    var Rand = Math.random();</span><br><span class="line">    <span class="keyword">return</span>(Min + Math.round(Rand * Range));</span><br><span class="line">  &#125;</span><br><span class="line"><span class="function">function <span class="title">setSidebarMarginTop</span> <span class="params">(headerOffset)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> $(<span class="string">'#sidebar'</span>).css(&#123; <span class="string">'margin-top'</span>: headerOffset &#125;);</span><br><span class="line">  &#125;</span><br><span class="line"> <span class="function">function <span class="title">getHeaderOffset</span> <span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> $(<span class="string">'.header-inner'</span>).height() + CONFIG.sidebar.offset;</span><br><span class="line">  &#125;</span><br><span class="line">  window.onload=function()&#123;</span><br><span class="line">    var subtitle = <span class="string">"&#123;&#123;config.subtitle&#125;&#125;"</span>;</span><br><span class="line">     var mytitle = subtitle.split(<span class="string">"W"</span>);</span><br><span class="line">     var max = mytitle.length-<span class="number">1</span>;</span><br><span class="line">     var index = GetRandomNum(<span class="number">0</span>,max);</span><br><span class="line">     var text = mytitle[index];</span><br><span class="line">     $(<span class="string">"#helloTitle"</span>).html(text);</span><br><span class="line">     var headOffset = getHeaderOffset();</span><br><span class="line">     setSidebarMarginTop(headOffset);</span><br><span class="line">     <span class="comment">//动态subtitle设置</span></span><br><span class="line">  &#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure><h2 id="然后修改brand-swig的部分代码"><a href="#然后修改brand-swig的部分代码" class="headerlink" title="然后修改brand.swig的部分代码"></a>然后修改brand.swig的部分代码</h2><p>找到<br></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;% if subtitle %&#125;</span><br><span class="line">  &#123;% if theme.seo %&#125;</span><br><span class="line">    ...</span><br><span class="line">  &#123;% else %&#125;</span><br><span class="line">    ...</span><br><span class="line">  &#123;% endif %&#125;</span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure><p></p><p>把这一段，把原来的修改成以下代码即可<br>ps: <code>title</code>和<code>subtitle</code>的<code>字体</code>还有<code>颜色</code>也可以在这个文件修改，即<code>style</code>标签，按个人爱好修改也可不要。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;% <span class="keyword">if</span> subtitle %&#125;</span><br><span class="line">  &#123;% <span class="keyword">if</span> theme.seo %&#125;</span><br><span class="line">    &lt;p style="color:#777;font-family:STXingkai" class="site-subtitle" id="helloTitle" itemprop="description"&gt;&lt;/p&gt;</span><br><span class="line">  &#123;% <span class="keyword">else</span> %&#125;</span><br><span class="line">    &lt;p style="color:#777;font-family:STXingkai" id="helloTitle" class="site-subtitle"&gt;&lt;/p&gt;</span><br><span class="line">  &#123;% endif %&#125;</span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure><p>之后部署后每次刷新就可以看到不同的subtitle了，开心😀</p><p>效果详见：<a href="https://lruihao.cn" target="_blank" rel="noopener">https://lruihao.cn</a></p>]]></content>
+    <content type="html"><![CDATA[<div class="note"><p>本文适合我这种纯小白。<br>目前为止，全网也就只有一个博主写到过这样动态显示subtitle的文章。<a href="https://www.jianshu.com/p/df2c844eeabf" rel="external nofollow noopener noreferrer" target="_blank">传送门</a>（关键词：js,后加载）<br>但是嘞，该博写的不怎么详细，17年底写的。当然更大的可能是next更新了一些文件结构，所以不适合现在使用了。以前我按原博的流程配置了一下没成功就搁在那里了，今天突然心血来潮。翻了翻原博主博客的源码，再与自己的对比了一下，发现了一些端倪。稍作调整后如下：</p></div><h2 id="修改站点配置文件，主要修改subtitle"><a href="#修改站点配置文件，主要修改subtitle" class="headerlink" title="修改站点配置文件，主要修改subtitle"></a>修改站点配置文件，主要修改subtitle</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">subtitle: 不怕万人阻挡，只怕自己投降。W你如何回忆，决定你是一个怎样的人！W人生当苦无妨，良人当归即可。W世间文字八万个，唯有情字最杀人。W逝者如斯乎，不舍昼夜。</span><br></pre></td></tr></table></figure><p>句子与句子之间以W分割，后续需要根据该标志位去拆分句子组。</p><h2 id="修改themes-next-layout-partials-header下面的index-swig文件。"><a href="#修改themes-next-layout-partials-header下面的index-swig文件。" class="headerlink" title="修改themes\next\layout_partials\header下面的index.swig文件。"></a>修改themes\next\layout_partials\header下面的index.swig文件。</h2><p>在最开头添加如下代码：<br>(这里用的原博的js)</p><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line"> <span class="function">function <span class="title">GetRandomNum</span><span class="params">(Min,Max)</span></span></span><br><span class="line"><span class="function">  </span>&#123;</span><br><span class="line">    var Range = Max - Min;</span><br><span class="line">    var Rand = Math.random();</span><br><span class="line">    <span class="keyword">return</span>(Min + Math.round(Rand * Range));</span><br><span class="line">  &#125;</span><br><span class="line"><span class="function">function <span class="title">setSidebarMarginTop</span> <span class="params">(headerOffset)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> $(<span class="string">'#sidebar'</span>).css(&#123; <span class="string">'margin-top'</span>: headerOffset &#125;);</span><br><span class="line">  &#125;</span><br><span class="line"> <span class="function">function <span class="title">getHeaderOffset</span> <span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> $(<span class="string">'.header-inner'</span>).height() + CONFIG.sidebar.offset;</span><br><span class="line">  &#125;</span><br><span class="line">  window.onload=function()&#123;</span><br><span class="line">    var subtitle = <span class="string">"&#123;&#123;config.subtitle&#125;&#125;"</span>;</span><br><span class="line">     var mytitle = subtitle.split(<span class="string">"W"</span>);</span><br><span class="line">     var max = mytitle.length-<span class="number">1</span>;</span><br><span class="line">     var index = GetRandomNum(<span class="number">0</span>,max);</span><br><span class="line">     var text = mytitle[index];</span><br><span class="line">     $(<span class="string">"#helloTitle"</span>).html(text);</span><br><span class="line">     var headOffset = getHeaderOffset();</span><br><span class="line">     setSidebarMarginTop(headOffset);</span><br><span class="line">     <span class="comment">//动态subtitle设置</span></span><br><span class="line">  &#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure><h2 id="然后修改brand-swig的部分代码"><a href="#然后修改brand-swig的部分代码" class="headerlink" title="然后修改brand.swig的部分代码"></a>然后修改brand.swig的部分代码</h2><p>找到<br></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;% if subtitle %&#125;</span><br><span class="line">  &#123;% if theme.seo %&#125;</span><br><span class="line">    ...</span><br><span class="line">  &#123;% else %&#125;</span><br><span class="line">    ...</span><br><span class="line">  &#123;% endif %&#125;</span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure><p></p><p>把这一段，把原来的修改成以下代码即可<br>ps: <code>title</code>和<code>subtitle</code>的<code>字体</code>还有<code>颜色</code>也可以在这个文件修改，即<code>style</code>标签，按个人爱好修改也可不要。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;% <span class="keyword">if</span> subtitle %&#125;</span><br><span class="line">  &#123;% <span class="keyword">if</span> theme.seo %&#125;</span><br><span class="line">    &lt;p style="color:#777;font-family:STXingkai" class="site-subtitle" id="helloTitle" itemprop="description"&gt;&lt;/p&gt;</span><br><span class="line">  &#123;% <span class="keyword">else</span> %&#125;</span><br><span class="line">    &lt;p style="color:#777;font-family:STXingkai" id="helloTitle" class="site-subtitle"&gt;&lt;/p&gt;</span><br><span class="line">  &#123;% endif %&#125;</span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure><p>之后部署后每次刷新就可以看到不同的subtitle了，开心😀</p><p>效果详见：<a href="https://lruihao.cn">https://lruihao.cn</a></p>]]></content>
     
     <summary type="html">
     
@@ -58,19 +58,19 @@
     
     </summary>
     
-      <category term="hexo博客" scheme="https://www.lruihao.cn/categories/hexo%E5%8D%9A%E5%AE%A2/"/>
+      <category term="hexo博客" scheme="https://lruihao.cn/categories/hexo%E5%8D%9A%E5%AE%A2/"/>
     
     
-      <category term="hexo博客" scheme="https://www.lruihao.cn/tags/hexo%E5%8D%9A%E5%AE%A2/"/>
+      <category term="hexo博客" scheme="https://lruihao.cn/tags/hexo%E5%8D%9A%E5%AE%A2/"/>
     
-      <category term="前端" scheme="https://www.lruihao.cn/tags/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="https://lruihao.cn/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
   <entry>
     <title>高逼格c语言画心</title>
-    <link href="https://www.lruihao.cn/heart.html"/>
-    <id>https://www.lruihao.cn/heart.html</id>
+    <link href="https://lruihao.cn/heart.html"/>
+    <id>https://lruihao.cn/heart.html</id>
     <published>2018-08-15T08:33:12.000Z</published>
     <updated>2018-08-23T02:04:05.164Z</updated>
     
@@ -82,17 +82,17 @@
     
     </summary>
     
-      <category term="生活随笔" scheme="https://www.lruihao.cn/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/"/>
+      <category term="生活随笔" scheme="https://lruihao.cn/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/"/>
     
     
-      <category term="生活随笔" scheme="https://www.lruihao.cn/tags/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/"/>
+      <category term="生活随笔" scheme="https://lruihao.cn/tags/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/"/>
     
   </entry>
   
   <entry>
     <title>git index.lock</title>
-    <link href="https://www.lruihao.cn/git-index-lock.html"/>
-    <id>https://www.lruihao.cn/git-index-lock.html</id>
+    <link href="https://lruihao.cn/git-index-lock.html"/>
+    <id>https://lruihao.cn/git-index-lock.html</id>
     <published>2018-08-14T11:21:23.000Z</published>
     <updated>2018-08-14T11:30:58.738Z</updated>
     
@@ -107,23 +107,23 @@
     
     </summary>
     
-      <category term="git" scheme="https://www.lruihao.cn/categories/git/"/>
+      <category term="git" scheme="https://lruihao.cn/categories/git/"/>
     
     
-      <category term="前端" scheme="https://www.lruihao.cn/tags/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="https://lruihao.cn/tags/%E5%89%8D%E7%AB%AF/"/>
     
-      <category term="git" scheme="https://www.lruihao.cn/tags/git/"/>
+      <category term="git" scheme="https://lruihao.cn/tags/git/"/>
     
   </entry>
   
   <entry>
     <title>在Android上搭建hexo博客</title>
-    <link href="https://www.lruihao.cn/termux.html"/>
-    <id>https://www.lruihao.cn/termux.html</id>
+    <link href="https://lruihao.cn/termux.html"/>
+    <id>https://lruihao.cn/termux.html</id>
     <published>2018-08-11T08:59:05.000Z</published>
     <updated>2018-08-11T09:15:37.425Z</updated>
     
-    <content type="html"><![CDATA[<div class="note success"><p>暑假刚开始的时候放假回家没带电脑，只能玩手机，想折腾一下博客都没有条件，在一个发现一个app,卧槽😱，termux真的强大！(初始化需要科学上网)安卓手机上的linux简直了，在手机就可以搭了一个hexo博客，只要在github上实现分支管理就可以多终端同步更新了。恕我学疏才浅，还只想到这些！一开始想回校后，折腾一下hexo-admin实现类似动态博客一样的多终端管理(手动滑稽)，现在发现termux这样子的操作也不错嘛，挺装哔hhhhhh</p></div><h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><ul><li>Termux</li><li>文件管理器（RE,MT文件管理器等高级一点的）</li></ul><h2 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h2><p>打开Termux，输入$<code>pkg install nodejs</code>安装Nodejs，在输入<code>pkg install git</code>安装Git。<br>过程会出现一个提示，输入y回车确认即可。<br>按照Hexo官网提示安装Hexo。<br></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br><span class="line">hexo init blog</span><br><span class="line"><span class="built_in">cd</span> blog</span><br></pre></td></tr></table></figure><p></p><p>然后按照基本操作配置Hexo，GitHub连上，部署测试一次。<br>安装部署插件<code>npm install hexo-deployer-git --save</code>，部署<code>hexo d -g</code><br>没有问题的话进行下一步。</p><h2 id="编辑"><a href="#编辑" class="headerlink" title="编辑"></a>编辑</h2><p>写文章的话使用<code>hexo new &lt;title&gt;</code>创建md文件，文件管理器打开<code>/data/data/com.termux/files/home/i/source/_posts/</code>编辑文章md文件。这种方式需要Root。<br>没有Root的话可以使用Vim，网上很多教程。但是这种方式相对来说更麻烦。</p><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="http://www.sqlsec.com/2018/05/termux.html?yyue=a21bo.50862.201879" rel="external nofollow noopener noreferrer" target="_blank">termux高级终端安装使用配置教程</a><br><a href="https://www.oyohyee.com/post/Note/Termux" rel="external nofollow noopener noreferrer" target="_blank">使用 Termux 在手机上运行 linux 黑科技</a><br><a href="https://lruihao.cn/hexo%20+%20github%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2.html" target="_blank" rel="noopener">hexo 搭建过程</a><br><a href="https://my.oschina.net/ryaneLee/blog/638440" rel="external nofollow noopener noreferrer" target="_blank">超详细教程</a></p><h2 id="效果图-未连接github，coding等"><a href="#效果图-未连接github，coding等" class="headerlink" title="效果图(未连接github，coding等)"></a>效果图(未连接github，coding等)</h2><p><img src="https://wx1.sinaimg.cn/mw690/006vSs63gy1ft2a0jo3hmj30u01hcguh.jpg" alt=""><br><img src="https://wx4.sinaimg.cn/mw690/006vSs63gy1ft2a0kmm5xj30u01hcn2a.jpg" alt=""><br><img src="https://wx3.sinaimg.cn/mw690/006vSs63gy1ft2a0lqt61j30u01hctla.jpg" alt=""><br><img src="https://wx2.sinaimg.cn/mw690/006vSs63gy1ft2a0mgkm6j30u01hc78l.jpg" alt=""></p>]]></content>
+    <content type="html"><![CDATA[<div class="note success"><p>暑假刚开始的时候放假回家没带电脑，只能玩手机，想折腾一下博客都没有条件，在一个发现一个app,卧槽😱，termux真的强大！(初始化需要科学上网)安卓手机上的linux简直了，在手机就可以搭了一个hexo博客，只要在github上实现分支管理就可以多终端同步更新了。恕我学疏才浅，还只想到这些！一开始想回校后，折腾一下hexo-admin实现类似动态博客一样的多终端管理(手动滑稽)，现在发现termux这样子的操作也不错嘛，挺装哔hhhhhh</p></div><h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><ul><li>Termux</li><li>文件管理器（RE,MT文件管理器等高级一点的）</li></ul><h2 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h2><p>打开Termux，输入$<code>pkg install nodejs</code>安装Nodejs，在输入<code>pkg install git</code>安装Git。<br>过程会出现一个提示，输入y回车确认即可。<br>按照Hexo官网提示安装Hexo。<br></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br><span class="line">hexo init blog</span><br><span class="line"><span class="built_in">cd</span> blog</span><br></pre></td></tr></table></figure><p></p><p>然后按照基本操作配置Hexo，GitHub连上，部署测试一次。<br>安装部署插件<code>npm install hexo-deployer-git --save</code>，部署<code>hexo d -g</code><br>没有问题的话进行下一步。</p><h2 id="编辑"><a href="#编辑" class="headerlink" title="编辑"></a>编辑</h2><p>写文章的话使用<code>hexo new &lt;title&gt;</code>创建md文件，文件管理器打开<code>/data/data/com.termux/files/home/i/source/_posts/</code>编辑文章md文件。这种方式需要Root。<br>没有Root的话可以使用Vim，网上很多教程。但是这种方式相对来说更麻烦。</p><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="http://www.sqlsec.com/2018/05/termux.html?yyue=a21bo.50862.201879" rel="external nofollow noopener noreferrer" target="_blank">termux高级终端安装使用配置教程</a><br><a href="https://www.oyohyee.com/post/Note/Termux" rel="external nofollow noopener noreferrer" target="_blank">使用 Termux 在手机上运行 linux 黑科技</a><br><a href="https://lruihao.cn/hexo%20+%20github%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2.html">hexo 搭建过程</a><br><a href="https://my.oschina.net/ryaneLee/blog/638440" rel="external nofollow noopener noreferrer" target="_blank">超详细教程</a></p><h2 id="效果图-未连接github，coding等"><a href="#效果图-未连接github，coding等" class="headerlink" title="效果图(未连接github，coding等)"></a>效果图(未连接github，coding等)</h2><p><img src="https://wx1.sinaimg.cn/mw690/006vSs63gy1ft2a0jo3hmj30u01hcguh.jpg" alt=""><br><img src="https://wx4.sinaimg.cn/mw690/006vSs63gy1ft2a0kmm5xj30u01hcn2a.jpg" alt=""><br><img src="https://wx3.sinaimg.cn/mw690/006vSs63gy1ft2a0lqt61j30u01hctla.jpg" alt=""><br><img src="https://wx2.sinaimg.cn/mw690/006vSs63gy1ft2a0mgkm6j30u01hc78l.jpg" alt=""></p>]]></content>
     
     <summary type="html">
     
@@ -134,19 +134,19 @@
     
     </summary>
     
-      <category term="hexo博客" scheme="https://www.lruihao.cn/categories/hexo%E5%8D%9A%E5%AE%A2/"/>
+      <category term="hexo博客" scheme="https://lruihao.cn/categories/hexo%E5%8D%9A%E5%AE%A2/"/>
     
     
-      <category term="hexo博客" scheme="https://www.lruihao.cn/tags/hexo%E5%8D%9A%E5%AE%A2/"/>
+      <category term="hexo博客" scheme="https://lruihao.cn/tags/hexo%E5%8D%9A%E5%AE%A2/"/>
     
-      <category term="termux" scheme="https://www.lruihao.cn/tags/termux/"/>
+      <category term="termux" scheme="https://lruihao.cn/tags/termux/"/>
     
   </entry>
   
   <entry>
     <title>石子阵列(组合数学)</title>
-    <link href="https://www.lruihao.cn/nowcoder157a.html"/>
-    <id>https://www.lruihao.cn/nowcoder157a.html</id>
+    <link href="https://lruihao.cn/nowcoder157a.html"/>
+    <id>https://lruihao.cn/nowcoder157a.html</id>
     <published>2018-08-10T14:11:00.000Z</published>
     <updated>2018-08-22T03:28:07.655Z</updated>
     
@@ -161,25 +161,25 @@
     
     </summary>
     
-      <category term="数学" scheme="https://www.lruihao.cn/categories/%E6%95%B0%E5%AD%A6/"/>
+      <category term="数学" scheme="https://lruihao.cn/categories/%E6%95%B0%E5%AD%A6/"/>
     
-      <category term="组合数学" scheme="https://www.lruihao.cn/categories/%E6%95%B0%E5%AD%A6/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/"/>
+      <category term="组合数学" scheme="https://lruihao.cn/categories/%E6%95%B0%E5%AD%A6/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/"/>
     
     
-      <category term="ACM" scheme="https://www.lruihao.cn/tags/ACM/"/>
+      <category term="ACM" scheme="https://lruihao.cn/tags/ACM/"/>
     
-      <category term="数学" scheme="https://www.lruihao.cn/tags/%E6%95%B0%E5%AD%A6/"/>
+      <category term="数学" scheme="https://lruihao.cn/tags/%E6%95%B0%E5%AD%A6/"/>
     
-      <category term="Nowcoder" scheme="https://www.lruihao.cn/tags/Nowcoder/"/>
+      <category term="组合数学" scheme="https://lruihao.cn/tags/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/"/>
     
-      <category term="组合数学" scheme="https://www.lruihao.cn/tags/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/"/>
+      <category term="Nowcoder" scheme="https://lruihao.cn/tags/Nowcoder/"/>
     
   </entry>
   
   <entry>
     <title>Dreamoon and Stairs</title>
-    <link href="https://www.lruihao.cn/codeforces476a.html"/>
-    <id>https://www.lruihao.cn/codeforces476a.html</id>
+    <link href="https://lruihao.cn/codeforces476a.html"/>
+    <id>https://lruihao.cn/codeforces476a.html</id>
     <published>2018-08-10T12:13:08.000Z</published>
     <updated>2018-08-10T13:18:19.400Z</updated>
     
@@ -194,21 +194,21 @@
     
     </summary>
     
-      <category term="数学" scheme="https://www.lruihao.cn/categories/%E6%95%B0%E5%AD%A6/"/>
+      <category term="数学" scheme="https://lruihao.cn/categories/%E6%95%B0%E5%AD%A6/"/>
     
     
-      <category term="ACM" scheme="https://www.lruihao.cn/tags/ACM/"/>
+      <category term="ACM" scheme="https://lruihao.cn/tags/ACM/"/>
     
-      <category term="Codeforces" scheme="https://www.lruihao.cn/tags/Codeforces/"/>
+      <category term="Codeforces" scheme="https://lruihao.cn/tags/Codeforces/"/>
     
-      <category term="数学" scheme="https://www.lruihao.cn/tags/%E6%95%B0%E5%AD%A6/"/>
+      <category term="数学" scheme="https://lruihao.cn/tags/%E6%95%B0%E5%AD%A6/"/>
     
   </entry>
   
   <entry>
     <title>Dreamoon and WiFi(组合数学)</title>
-    <link href="https://www.lruihao.cn/codeforces476b.html"/>
-    <id>https://www.lruihao.cn/codeforces476b.html</id>
+    <link href="https://lruihao.cn/codeforces476b.html"/>
+    <id>https://lruihao.cn/codeforces476b.html</id>
     <published>2018-08-10T09:44:47.000Z</published>
     <updated>2018-08-10T12:15:15.622Z</updated>
     
@@ -223,25 +223,25 @@
     
     </summary>
     
-      <category term="数学" scheme="https://www.lruihao.cn/categories/%E6%95%B0%E5%AD%A6/"/>
+      <category term="数学" scheme="https://lruihao.cn/categories/%E6%95%B0%E5%AD%A6/"/>
     
-      <category term="组合数学" scheme="https://www.lruihao.cn/categories/%E6%95%B0%E5%AD%A6/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/"/>
+      <category term="组合数学" scheme="https://lruihao.cn/categories/%E6%95%B0%E5%AD%A6/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/"/>
     
     
-      <category term="ACM" scheme="https://www.lruihao.cn/tags/ACM/"/>
+      <category term="ACM" scheme="https://lruihao.cn/tags/ACM/"/>
     
-      <category term="Codeforces" scheme="https://www.lruihao.cn/tags/Codeforces/"/>
+      <category term="Codeforces" scheme="https://lruihao.cn/tags/Codeforces/"/>
     
-      <category term="数学" scheme="https://www.lruihao.cn/tags/%E6%95%B0%E5%AD%A6/"/>
+      <category term="数学" scheme="https://lruihao.cn/tags/%E6%95%B0%E5%AD%A6/"/>
     
-      <category term="组合数学" scheme="https://www.lruihao.cn/tags/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/"/>
+      <category term="组合数学" scheme="https://lruihao.cn/tags/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/"/>
     
   </entry>
   
   <entry>
     <title>The equation-SGU106(扩展欧几里得)(转)</title>
-    <link href="https://www.lruihao.cn/Euclid.html"/>
-    <id>https://www.lruihao.cn/Euclid.html</id>
+    <link href="https://lruihao.cn/Euclid.html"/>
+    <id>https://lruihao.cn/Euclid.html</id>
     <published>2018-08-10T02:32:39.000Z</published>
     <updated>2018-08-10T03:20:11.109Z</updated>
     
@@ -256,25 +256,25 @@
     
     </summary>
     
-      <category term="数学" scheme="https://www.lruihao.cn/categories/%E6%95%B0%E5%AD%A6/"/>
+      <category term="数学" scheme="https://lruihao.cn/categories/%E6%95%B0%E5%AD%A6/"/>
     
-      <category term="数论" scheme="https://www.lruihao.cn/categories/%E6%95%B0%E5%AD%A6/%E6%95%B0%E8%AE%BA/"/>
+      <category term="数论" scheme="https://lruihao.cn/categories/%E6%95%B0%E5%AD%A6/%E6%95%B0%E8%AE%BA/"/>
     
     
-      <category term="ACM" scheme="https://www.lruihao.cn/tags/ACM/"/>
+      <category term="ACM" scheme="https://lruihao.cn/tags/ACM/"/>
     
-      <category term="数学" scheme="https://www.lruihao.cn/tags/%E6%95%B0%E5%AD%A6/"/>
+      <category term="数学" scheme="https://lruihao.cn/tags/%E6%95%B0%E5%AD%A6/"/>
     
-      <category term="数论" scheme="https://www.lruihao.cn/tags/%E6%95%B0%E8%AE%BA/"/>
+      <category term="数论" scheme="https://lruihao.cn/tags/%E6%95%B0%E8%AE%BA/"/>
     
-      <category term="欧几里得" scheme="https://www.lruihao.cn/tags/%E6%AC%A7%E5%87%A0%E9%87%8C%E5%BE%97/"/>
+      <category term="欧几里得" scheme="https://lruihao.cn/tags/%E6%AC%A7%E5%87%A0%E9%87%8C%E5%BE%97/"/>
     
   </entry>
   
   <entry>
     <title>Leading and Trailing-lightoj1282(快速幂+对数运算)</title>
-    <link href="https://www.lruihao.cn/lightoj1282.html"/>
-    <id>https://www.lruihao.cn/lightoj1282.html</id>
+    <link href="https://lruihao.cn/lightoj1282.html"/>
+    <id>https://lruihao.cn/lightoj1282.html</id>
     <published>2018-08-09T12:55:26.000Z</published>
     <updated>2018-08-10T02:34:39.345Z</updated>
     
@@ -286,25 +286,25 @@
     
     </summary>
     
-      <category term="数学" scheme="https://www.lruihao.cn/categories/%E6%95%B0%E5%AD%A6/"/>
+      <category term="数学" scheme="https://lruihao.cn/categories/%E6%95%B0%E5%AD%A6/"/>
     
-      <category term="数论" scheme="https://www.lruihao.cn/categories/%E6%95%B0%E5%AD%A6/%E6%95%B0%E8%AE%BA/"/>
+      <category term="数论" scheme="https://lruihao.cn/categories/%E6%95%B0%E5%AD%A6/%E6%95%B0%E8%AE%BA/"/>
     
     
-      <category term="ACM" scheme="https://www.lruihao.cn/tags/ACM/"/>
+      <category term="ACM" scheme="https://lruihao.cn/tags/ACM/"/>
     
-      <category term="数学" scheme="https://www.lruihao.cn/tags/%E6%95%B0%E5%AD%A6/"/>
+      <category term="数学" scheme="https://lruihao.cn/tags/%E6%95%B0%E5%AD%A6/"/>
     
-      <category term="数论" scheme="https://www.lruihao.cn/tags/%E6%95%B0%E8%AE%BA/"/>
+      <category term="数论" scheme="https://lruihao.cn/tags/%E6%95%B0%E8%AE%BA/"/>
     
-      <category term="快速幂" scheme="https://www.lruihao.cn/tags/%E5%BF%AB%E9%80%9F%E5%B9%82/"/>
+      <category term="快速幂" scheme="https://lruihao.cn/tags/%E5%BF%AB%E9%80%9F%E5%B9%82/"/>
     
   </entry>
   
   <entry>
     <title>Codeforces Round 502(Div.1 + Div.2)</title>
-    <link href="https://www.lruihao.cn/cfcontest1017.html"/>
-    <id>https://www.lruihao.cn/cfcontest1017.html</id>
+    <link href="https://lruihao.cn/cfcontest1017.html"/>
+    <id>https://lruihao.cn/cfcontest1017.html</id>
     <published>2018-08-09T02:48:00.000Z</published>
     <updated>2018-08-10T12:22:06.915Z</updated>
     
@@ -316,21 +316,21 @@
     
     </summary>
     
-      <category term="ACM" scheme="https://www.lruihao.cn/categories/ACM/"/>
+      <category term="ACM" scheme="https://lruihao.cn/categories/ACM/"/>
     
     
-      <category term="ACM" scheme="https://www.lruihao.cn/tags/ACM/"/>
+      <category term="ACM" scheme="https://lruihao.cn/tags/ACM/"/>
     
-      <category term="Codeforces" scheme="https://www.lruihao.cn/tags/Codeforces/"/>
+      <category term="Codeforces" scheme="https://lruihao.cn/tags/Codeforces/"/>
     
-      <category term="组合数学" scheme="https://www.lruihao.cn/tags/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/"/>
+      <category term="组合数学" scheme="https://lruihao.cn/tags/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/"/>
     
   </entry>
   
   <entry>
     <title>欧拉函数</title>
-    <link href="https://www.lruihao.cn/euler.html"/>
-    <id>https://www.lruihao.cn/euler.html</id>
+    <link href="https://lruihao.cn/euler.html"/>
+    <id>https://lruihao.cn/euler.html</id>
     <published>2018-08-08T09:10:07.000Z</published>
     <updated>2018-08-09T00:43:55.808Z</updated>
     
@@ -342,23 +342,23 @@
     
     </summary>
     
-      <category term="数学" scheme="https://www.lruihao.cn/categories/%E6%95%B0%E5%AD%A6/"/>
+      <category term="数学" scheme="https://lruihao.cn/categories/%E6%95%B0%E5%AD%A6/"/>
     
-      <category term="数论" scheme="https://www.lruihao.cn/categories/%E6%95%B0%E5%AD%A6/%E6%95%B0%E8%AE%BA/"/>
+      <category term="数论" scheme="https://lruihao.cn/categories/%E6%95%B0%E5%AD%A6/%E6%95%B0%E8%AE%BA/"/>
     
     
-      <category term="数学" scheme="https://www.lruihao.cn/tags/%E6%95%B0%E5%AD%A6/"/>
+      <category term="数学" scheme="https://lruihao.cn/tags/%E6%95%B0%E5%AD%A6/"/>
     
-      <category term="数论" scheme="https://www.lruihao.cn/tags/%E6%95%B0%E8%AE%BA/"/>
+      <category term="数论" scheme="https://lruihao.cn/tags/%E6%95%B0%E8%AE%BA/"/>
     
-      <category term="euler" scheme="https://www.lruihao.cn/tags/euler/"/>
+      <category term="euler" scheme="https://lruihao.cn/tags/euler/"/>
     
   </entry>
   
   <entry>
     <title>Heavy Transportation-poj1797(dijkstra或最大生成树)</title>
-    <link href="https://www.lruihao.cn/poj1797.html"/>
-    <id>https://www.lruihao.cn/poj1797.html</id>
+    <link href="https://lruihao.cn/poj1797.html"/>
+    <id>https://lruihao.cn/poj1797.html</id>
     <published>2018-08-06T01:42:11.000Z</published>
     <updated>2018-08-06T03:58:58.498Z</updated>
     
@@ -370,27 +370,27 @@
     
     </summary>
     
-      <category term="ACM" scheme="https://www.lruihao.cn/categories/ACM/"/>
+      <category term="ACM" scheme="https://lruihao.cn/categories/ACM/"/>
     
-      <category term="最短路" scheme="https://www.lruihao.cn/categories/ACM/%E6%9C%80%E7%9F%AD%E8%B7%AF/"/>
+      <category term="最短路" scheme="https://lruihao.cn/categories/ACM/%E6%9C%80%E7%9F%AD%E8%B7%AF/"/>
     
     
-      <category term="ACM" scheme="https://www.lruihao.cn/tags/ACM/"/>
+      <category term="ACM" scheme="https://lruihao.cn/tags/ACM/"/>
     
-      <category term="POJ" scheme="https://www.lruihao.cn/tags/POJ/"/>
+      <category term="POJ" scheme="https://lruihao.cn/tags/POJ/"/>
     
-      <category term="最短路" scheme="https://www.lruihao.cn/tags/%E6%9C%80%E7%9F%AD%E8%B7%AF/"/>
+      <category term="最短路" scheme="https://lruihao.cn/tags/%E6%9C%80%E7%9F%AD%E8%B7%AF/"/>
     
   </entry>
   
   <entry>
     <title>hexo博客自定义console log</title>
-    <link href="https://www.lruihao.cn/console-log.html"/>
-    <id>https://www.lruihao.cn/console-log.html</id>
+    <link href="https://lruihao.cn/console-log.html"/>
+    <id>https://lruihao.cn/console-log.html</id>
     <published>2018-08-04T08:19:06.000Z</published>
     <updated>2018-08-11T14:06:29.926Z</updated>
     
-    <content type="html"><![CDATA[<p>看到知乎，百度的页面F12检查后都会有一些有趣的招聘信息。于是乎我也想给我的博客加一个。<br>我主要用到的工具：</p><ul><li>console.log()</li><li>Notepad++</li><li><a href="http://picascii.com" rel="external nofollow noopener noreferrer" target="_blank">在线图片转文字工具</a></li></ul><a id="more"></a><h2 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h2><p>用js在<code>&lt;body&gt;&lt;/body&gt;</code>使用console.log()就行了，hexo的主题文件在<code>_layout.swig</code>里，所以我们打开该文件，在该位置，添加js就行了；<br><img src="/console-log/console.png" alt="console"></p><h2 id="图案"><a href="#图案" class="headerlink" title="图案"></a>图案</h2><p>我用的我自己的一张照片(电脑上照片就那么几张。。。)，然后用<a href="http://picascii.com" rel="external nofollow noopener noreferrer" target="_blank">在线图片转文字工具</a>转字符，<br>选择文件，设置大小，然后生成，<img src="/console-log/QQ截图1.png" alt=""><br><img src="/console-log/QQ图片2.png" alt="">生成后，复制TXT文件（下面那个框，上面的是HTML代码）<br><img src="/console-log/QQ截图3.png" alt=""><br>粘贴到Notepad++里面，然后按图操作；<br><img src="/console-log/QQ截图4.png" alt=""><br>Ctrl+H 替换<br><img src="/console-log/QQ截图5.png" alt=""><br><img src="/console-log/QQ截图6.png" alt=""><br>最后就变成一个字符串了。</p><h2 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h2><p><img src="/console-log/QQ截图7.png" alt=""><br><a href="https://lruihao.cn" target="_blank" rel="noopener">线上demo</a>,按F12找到console</p><h2 id="我的txt"><a href="#我的txt" class="headerlink" title="我的txt"></a>我的txt</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\n`              @@#``@@@@@@@@@@@@@@@@@@##,`   \n`              @@#`;@@@@@@@@@@@@@@@@@@@&apos;:&apos;   \n`              @@#`@@@@@@@@@@@@@@@@@@@#+#;`  \n`              @@#`@@@@@@@@@@@@@@@@@@###@&apos;.  \n`              @@+.@@@@@@@@@@@@@@@@@@@@@##,  \n`              @@#,@@@@@@@@@@@@@@@@@@@@@@#,  \n`              #@#:@@@@@@@@@@@@@@@@@@@@@@@,  \n`              #@#&apos;@@@@@@@@@@@@@@@@@@@@@@@.  \n`              +@#;@@@@@@@@@@@@@@@@@@@@@@#   \n`          `;: ;@#&apos;@@@@@@@@@@@@@@@@@@+&apos;+@&apos;   \n`    `,,;&apos;;&apos;+&apos;;&apos;@@+:@@@@@@@@@@@@##@#&apos;,.:#;   \n,, ``    ``..,:;@@#&apos;@@@@@@@@#####@@@@#:`:.   \n`       `````:++@@@@@@@@@@@@@###@@@@#+,..    \n        ``````.#@@@@@@@@@@@@@@#@@@#++#&apos;``    \n`    ```.,,:,.`:@@@@@@@@@@@@@###@@@##&apos;.`     \n``..`````..,::;+@@@@@@@@@@@@#+`::+##&apos;`.      \n`      ````.```,@@@@@@@@@@@##;``.,&apos;;` `      \n``.;@@@@@@@@@@@@@@@@@@@@@@###;``..``````     \n#@@@@@@@@@@@@@@@@@@@@@@@@##@#;``,``,.``      \n@@@@@@@@@@@@@@@@@@@.`````..``.. +` `:`       \n@+&apos;&apos;++#####@@#`.@@@``````` ` `,```  ``       \n&apos;;;;;&apos;+##+&apos;+.`;+@@@,..```` `` :,.            \n;::,,:;+#++``,,#@@@&apos;..``````` ,`.``          \n;,,,,...&apos;#.,,..#@@@#,,.`````` .````          \n:,,,,....`,::;&apos;&apos;+#@#;,..`````````.``         \n:,,,.....&apos;##++&apos;&apos;&apos;;:+&apos;:,.`..,,...`            \n:,,,...#####+&apos;+#@@@&apos;.&apos;;+:.  ` ``             \n;,,.`&apos;####&apos;#,`.`+@@@+&apos;``` `.`                \n;,.`#@@@#+:&apos;+++##+@##@,,,,`                  \n&apos;,.#@@###&apos;&apos;&apos;&apos;;:,.```,+#.                     \n+,#@@@####;,,..```````````````         `.:,::\n+@@@@###+;,,..``````````````````          `.,\n#@@@##+&apos;,,,........``````````````            \n@@@@#+:,,,,`........``````````               \n@@@#+:,,,,.`````.....``````````           `` \n@@##&apos;:,......`````....```  `````          ```\n@@@#&apos;:,....,..``````..````    ```         ```\n@@@#&apos;,....,,,..```````````     ```         ..\n@@@#,.....,,,,.``  ````````   ``````         \n@@@+....,,,,,..`````````````   ``````````    \n@@@:....,,,,.LiRuihao````````  ```````````` \n#@@,....,,,,.Always Be Yourself !````````````\n,##,,...,::,.````````````..``````   `......``\n,&apos;#,,..,,:::.`````````........``````   `.,,..\n\n你好！\n欢迎进入什么都不会的李瑞豪的个人网站！\nhttps://lruihao.cn\nhttps://www.lruihao.cn\nhttps://lruihao.github.io\nhttps://liruihao.coding.me\n\n\n\n</span><br></pre></td></tr></table></figure><p>其他个人网站，个人博客也是可以的。</p>]]></content>
+    <content type="html"><![CDATA[<p>看到知乎，百度的页面F12检查后都会有一些有趣的招聘信息。于是乎我也想给我的博客加一个。<br>我主要用到的工具：</p><ul><li>console.log()</li><li>Notepad++</li><li><a href="http://picascii.com" rel="external nofollow noopener noreferrer" target="_blank">在线图片转文字工具</a></li></ul><a id="more"></a><h2 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h2><p>用js在<code>&lt;body&gt;&lt;/body&gt;</code>使用console.log()就行了，hexo的主题文件在<code>_layout.swig</code>里，所以我们打开该文件，在该位置，添加js就行了；<br><img src="/console-log/console.png" alt="console"></p><h2 id="图案"><a href="#图案" class="headerlink" title="图案"></a>图案</h2><p>我用的我自己的一张照片(电脑上照片就那么几张。。。)，然后用<a href="http://picascii.com" rel="external nofollow noopener noreferrer" target="_blank">在线图片转文字工具</a>转字符，<br>选择文件，设置大小，然后生成，<img src="/console-log/QQ截图1.png" alt=""><br><img src="/console-log/QQ图片2.png" alt="">生成后，复制TXT文件（下面那个框，上面的是HTML代码）<br><img src="/console-log/QQ截图3.png" alt=""><br>粘贴到Notepad++里面，然后按图操作；<br><img src="/console-log/QQ截图4.png" alt=""><br>Ctrl+H 替换<br><img src="/console-log/QQ截图5.png" alt=""><br><img src="/console-log/QQ截图6.png" alt=""><br>最后就变成一个字符串了。</p><h2 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h2><p><img src="/console-log/QQ截图7.png" alt=""><br><a href="https://lruihao.cn">线上demo</a>,按F12找到console</p><h2 id="我的txt"><a href="#我的txt" class="headerlink" title="我的txt"></a>我的txt</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\n`              @@#``@@@@@@@@@@@@@@@@@@##,`   \n`              @@#`;@@@@@@@@@@@@@@@@@@@&apos;:&apos;   \n`              @@#`@@@@@@@@@@@@@@@@@@@#+#;`  \n`              @@#`@@@@@@@@@@@@@@@@@@###@&apos;.  \n`              @@+.@@@@@@@@@@@@@@@@@@@@@##,  \n`              @@#,@@@@@@@@@@@@@@@@@@@@@@#,  \n`              #@#:@@@@@@@@@@@@@@@@@@@@@@@,  \n`              #@#&apos;@@@@@@@@@@@@@@@@@@@@@@@.  \n`              +@#;@@@@@@@@@@@@@@@@@@@@@@#   \n`          `;: ;@#&apos;@@@@@@@@@@@@@@@@@@+&apos;+@&apos;   \n`    `,,;&apos;;&apos;+&apos;;&apos;@@+:@@@@@@@@@@@@##@#&apos;,.:#;   \n,, ``    ``..,:;@@#&apos;@@@@@@@@#####@@@@#:`:.   \n`       `````:++@@@@@@@@@@@@@###@@@@#+,..    \n        ``````.#@@@@@@@@@@@@@@#@@@#++#&apos;``    \n`    ```.,,:,.`:@@@@@@@@@@@@@###@@@##&apos;.`     \n``..`````..,::;+@@@@@@@@@@@@#+`::+##&apos;`.      \n`      ````.```,@@@@@@@@@@@##;``.,&apos;;` `      \n``.;@@@@@@@@@@@@@@@@@@@@@@###;``..``````     \n#@@@@@@@@@@@@@@@@@@@@@@@@##@#;``,``,.``      \n@@@@@@@@@@@@@@@@@@@.`````..``.. +` `:`       \n@+&apos;&apos;++#####@@#`.@@@``````` ` `,```  ``       \n&apos;;;;;&apos;+##+&apos;+.`;+@@@,..```` `` :,.            \n;::,,:;+#++``,,#@@@&apos;..``````` ,`.``          \n;,,,,...&apos;#.,,..#@@@#,,.`````` .````          \n:,,,,....`,::;&apos;&apos;+#@#;,..`````````.``         \n:,,,.....&apos;##++&apos;&apos;&apos;;:+&apos;:,.`..,,...`            \n:,,,...#####+&apos;+#@@@&apos;.&apos;;+:.  ` ``             \n;,,.`&apos;####&apos;#,`.`+@@@+&apos;``` `.`                \n;,.`#@@@#+:&apos;+++##+@##@,,,,`                  \n&apos;,.#@@###&apos;&apos;&apos;&apos;;:,.```,+#.                     \n+,#@@@####;,,..```````````````         `.:,::\n+@@@@###+;,,..``````````````````          `.,\n#@@@##+&apos;,,,........``````````````            \n@@@@#+:,,,,`........``````````               \n@@@#+:,,,,.`````.....``````````           `` \n@@##&apos;:,......`````....```  `````          ```\n@@@#&apos;:,....,..``````..````    ```         ```\n@@@#&apos;,....,,,..```````````     ```         ..\n@@@#,.....,,,,.``  ````````   ``````         \n@@@+....,,,,,..`````````````   ``````````    \n@@@:....,,,,.LiRuihao````````  ```````````` \n#@@,....,,,,.Always Be Yourself !````````````\n,##,,...,::,.````````````..``````   `......``\n,&apos;#,,..,,:::.`````````........``````   `.,,..\n\n你好！\n欢迎进入什么都不会的李瑞豪的个人网站！\nhttps://lruihao.cn\nhttps://www.lruihao.cn\nhttps://lruihao.github.io\nhttps://liruihao.coding.me\n\n\n\n</span><br></pre></td></tr></table></figure><p>其他个人网站，个人博客也是可以的。</p>]]></content>
     
     <summary type="html">
     
@@ -398,19 +398,19 @@
     
     </summary>
     
-      <category term="hexo博客" scheme="https://www.lruihao.cn/categories/hexo%E5%8D%9A%E5%AE%A2/"/>
+      <category term="hexo博客" scheme="https://lruihao.cn/categories/hexo%E5%8D%9A%E5%AE%A2/"/>
     
     
-      <category term="hexo博客" scheme="https://www.lruihao.cn/tags/hexo%E5%8D%9A%E5%AE%A2/"/>
+      <category term="hexo博客" scheme="https://lruihao.cn/tags/hexo%E5%8D%9A%E5%AE%A2/"/>
     
-      <category term="前端" scheme="https://www.lruihao.cn/tags/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="https://lruihao.cn/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
   <entry>
     <title>Til the Cows Come Home-poj2387(dijkstra判断重边)</title>
-    <link href="https://www.lruihao.cn/poj2387.html"/>
-    <id>https://www.lruihao.cn/poj2387.html</id>
+    <link href="https://lruihao.cn/poj2387.html"/>
+    <id>https://lruihao.cn/poj2387.html</id>
     <published>2018-08-03T13:40:33.000Z</published>
     <updated>2018-08-04T02:35:12.575Z</updated>
     
@@ -425,21 +425,21 @@
     
     </summary>
     
-      <category term="ACM" scheme="https://www.lruihao.cn/categories/ACM/"/>
+      <category term="ACM" scheme="https://lruihao.cn/categories/ACM/"/>
     
-      <category term="最短路" scheme="https://www.lruihao.cn/categories/ACM/%E6%9C%80%E7%9F%AD%E8%B7%AF/"/>
+      <category term="最短路" scheme="https://lruihao.cn/categories/ACM/%E6%9C%80%E7%9F%AD%E8%B7%AF/"/>
     
     
-      <category term="ACM" scheme="https://www.lruihao.cn/tags/ACM/"/>
+      <category term="ACM" scheme="https://lruihao.cn/tags/ACM/"/>
     
-      <category term="最短路" scheme="https://www.lruihao.cn/tags/%E6%9C%80%E7%9F%AD%E8%B7%AF/"/>
+      <category term="最短路" scheme="https://lruihao.cn/tags/%E6%9C%80%E7%9F%AD%E8%B7%AF/"/>
     
   </entry>
   
   <entry>
     <title>最短路入门</title>
-    <link href="https://www.lruihao.cn/zuiduanlu.html"/>
-    <id>https://www.lruihao.cn/zuiduanlu.html</id>
+    <link href="https://lruihao.cn/zuiduanlu.html"/>
+    <id>https://lruihao.cn/zuiduanlu.html</id>
     <published>2018-08-03T08:27:16.000Z</published>
     <updated>2018-08-22T07:40:31.132Z</updated>
     
@@ -454,21 +454,21 @@
     
     </summary>
     
-      <category term="ACM" scheme="https://www.lruihao.cn/categories/ACM/"/>
+      <category term="ACM" scheme="https://lruihao.cn/categories/ACM/"/>
     
-      <category term="最短路" scheme="https://www.lruihao.cn/categories/ACM/%E6%9C%80%E7%9F%AD%E8%B7%AF/"/>
+      <category term="最短路" scheme="https://lruihao.cn/categories/ACM/%E6%9C%80%E7%9F%AD%E8%B7%AF/"/>
     
     
-      <category term="ACM" scheme="https://www.lruihao.cn/tags/ACM/"/>
+      <category term="ACM" scheme="https://lruihao.cn/tags/ACM/"/>
     
-      <category term="最短路" scheme="https://www.lruihao.cn/tags/%E6%9C%80%E7%9F%AD%E8%B7%AF/"/>
+      <category term="最短路" scheme="https://lruihao.cn/tags/%E6%9C%80%E7%9F%AD%E8%B7%AF/"/>
     
   </entry>
   
   <entry>
     <title>菜鸟，大牛和教主，三者的区别(转)</title>
-    <link href="https://www.lruihao.cn/fucking4.html"/>
-    <id>https://www.lruihao.cn/fucking4.html</id>
+    <link href="https://lruihao.cn/fucking4.html"/>
+    <id>https://lruihao.cn/fucking4.html</id>
     <published>2018-08-03T03:39:57.000Z</published>
     <updated>2018-08-03T03:44:10.428Z</updated>
     
@@ -483,21 +483,21 @@
     
     </summary>
     
-      <category term="ACM" scheme="https://www.lruihao.cn/categories/ACM/"/>
+      <category term="ACM" scheme="https://lruihao.cn/categories/ACM/"/>
     
-      <category term="sth for fu&amp;king acm" scheme="https://www.lruihao.cn/categories/ACM/sth-for-fu-king-acm/"/>
+      <category term="sth for fu&amp;king acm" scheme="https://lruihao.cn/categories/ACM/sth-for-fu-king-acm/"/>
     
     
-      <category term="生活随笔" scheme="https://www.lruihao.cn/tags/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/"/>
+      <category term="生活随笔" scheme="https://lruihao.cn/tags/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/"/>
     
-      <category term="sth for fu&amp;king acm" scheme="https://www.lruihao.cn/tags/sth-for-fu-king-acm/"/>
+      <category term="sth for fu&amp;king acm" scheme="https://lruihao.cn/tags/sth-for-fu-king-acm/"/>
     
   </entry>
   
   <entry>
     <title>你搞图论有毛用啊！！(转)</title>
-    <link href="https://www.lruihao.cn/fucking3.html"/>
-    <id>https://www.lruihao.cn/fucking3.html</id>
+    <link href="https://lruihao.cn/fucking3.html"/>
+    <id>https://lruihao.cn/fucking3.html</id>
     <published>2018-08-03T03:39:46.000Z</published>
     <updated>2018-08-03T03:40:44.309Z</updated>
     
@@ -512,21 +512,21 @@
     
     </summary>
     
-      <category term="ACM" scheme="https://www.lruihao.cn/categories/ACM/"/>
+      <category term="ACM" scheme="https://lruihao.cn/categories/ACM/"/>
     
-      <category term="sth for fu&amp;king acm" scheme="https://www.lruihao.cn/categories/ACM/sth-for-fu-king-acm/"/>
+      <category term="sth for fu&amp;king acm" scheme="https://lruihao.cn/categories/ACM/sth-for-fu-king-acm/"/>
     
     
-      <category term="生活随笔" scheme="https://www.lruihao.cn/tags/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/"/>
+      <category term="生活随笔" scheme="https://lruihao.cn/tags/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/"/>
     
-      <category term="sth for fu&amp;king acm" scheme="https://www.lruihao.cn/tags/sth-for-fu-king-acm/"/>
+      <category term="sth for fu&amp;king acm" scheme="https://lruihao.cn/tags/sth-for-fu-king-acm/"/>
     
   </entry>
   
   <entry>
     <title>搞ACM最悲催的事。。。(转)</title>
-    <link href="https://www.lruihao.cn/fucking2.html"/>
-    <id>https://www.lruihao.cn/fucking2.html</id>
+    <link href="https://lruihao.cn/fucking2.html"/>
+    <id>https://lruihao.cn/fucking2.html</id>
     <published>2018-08-03T03:38:25.000Z</published>
     <updated>2018-08-03T03:39:31.593Z</updated>
     
@@ -541,21 +541,21 @@
     
     </summary>
     
-      <category term="ACM" scheme="https://www.lruihao.cn/categories/ACM/"/>
+      <category term="ACM" scheme="https://lruihao.cn/categories/ACM/"/>
     
-      <category term="sth for fu&amp;king acm" scheme="https://www.lruihao.cn/categories/ACM/sth-for-fu-king-acm/"/>
+      <category term="sth for fu&amp;king acm" scheme="https://lruihao.cn/categories/ACM/sth-for-fu-king-acm/"/>
     
     
-      <category term="生活随笔" scheme="https://www.lruihao.cn/tags/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/"/>
+      <category term="生活随笔" scheme="https://lruihao.cn/tags/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/"/>
     
-      <category term="sth for fu&amp;king acm" scheme="https://www.lruihao.cn/tags/sth-for-fu-king-acm/"/>
+      <category term="sth for fu&amp;king acm" scheme="https://lruihao.cn/tags/sth-for-fu-king-acm/"/>
     
   </entry>
   
   <entry>
     <title>搞ACM的你伤不起（转）</title>
-    <link href="https://www.lruihao.cn/fucking1.html"/>
-    <id>https://www.lruihao.cn/fucking1.html</id>
+    <link href="https://lruihao.cn/fucking1.html"/>
+    <id>https://lruihao.cn/fucking1.html</id>
     <published>2018-08-03T03:29:10.000Z</published>
     <updated>2018-08-03T03:37:40.241Z</updated>
     
@@ -570,14 +570,14 @@
     
     </summary>
     
-      <category term="ACM" scheme="https://www.lruihao.cn/categories/ACM/"/>
+      <category term="ACM" scheme="https://lruihao.cn/categories/ACM/"/>
     
-      <category term="sth for fu&amp;king acm" scheme="https://www.lruihao.cn/categories/ACM/sth-for-fu-king-acm/"/>
+      <category term="sth for fu&amp;king acm" scheme="https://lruihao.cn/categories/ACM/sth-for-fu-king-acm/"/>
     
     
-      <category term="生活随笔" scheme="https://www.lruihao.cn/tags/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/"/>
+      <category term="生活随笔" scheme="https://lruihao.cn/tags/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/"/>
     
-      <category term="sth for fu&amp;king acm" scheme="https://www.lruihao.cn/tags/sth-for-fu-king-acm/"/>
+      <category term="sth for fu&amp;king acm" scheme="https://lruihao.cn/tags/sth-for-fu-king-acm/"/>
     
   </entry>
   
