@@ -2,9 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://lruihao.cn/bugs.html</loc>
+    
+    <lastmod>2018-08-28T08:23:26.657Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://lruihao.cn/dongtaisub.html</loc>
     
-    <lastmod>2018-08-28T02:23:38.043Z</lastmod>
+    <lastmod>2018-08-28T08:08:17.171Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://lruihao.cn/hexo%20+%20github%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2.html</loc>
+    
+    <lastmod>2018-08-28T07:27:55.389Z</lastmod>
     
   </url>
   
@@ -58,13 +72,6 @@
   </url>
   
   <url>
-    <loc>https://lruihao.cn/hexo%20+%20github%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2.html</loc>
-    
-    <lastmod>2018-08-27T01:33:33.305Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://lruihao.cn/404.html</loc>
     
     <lastmod>2018-08-24T13:58:00.220Z</lastmod>
@@ -75,13 +82,6 @@
     <loc>https://lruihao.cn/games/index.html</loc>
     
     <lastmod>2018-08-23T14:26:19.529Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://lruihao.cn/bugs.html</loc>
-    
-    <lastmod>2018-08-23T09:08:11.604Z</lastmod>
     
   </url>
   

@@ -15,7 +15,7 @@
   <entry>
     <title><![CDATA[hexo个性化-next主题动态显示subtitle]]></title>
     <url>%2Fdongtaisub.html</url>
-    <content type="text"><![CDATA[本文适合我这种纯小白。目前为止，全网也就只有一个博主写到过这样动态显示subtitle的文章。传送门（关键词：js,后加载）但是嘞，该博写的不怎么详细，17年底写的。当然更大的可能是next更新了一些文件结构，所以不适合现在使用了。以前我按原博的流程配置了一下没成功就搁在那里了，今天突然心血来潮。翻了翻原博主博客的源码，再与自己的对比了一下，发现了一些端倪。稍作调整后如下：修改站点配置文件，主要修改subtitle小伙伴们博主这里只是提供一个思路，不要和我用一模一样的啊，不然撞了多尴尬呀1subtitle: 不怕万人阻挡，只怕自己投降。W你如何回忆，决定你是一个怎样的人！W这是一个句子。W这是另一个句子。W这些句子你们不要搞一样的不然怎么叫个性签名-_-！。句子与句子之间以W分割，后续需要根据该标志位去拆分句子组。修改themes\next\layout_partials\header下面的index.swig文件。在最开头添加如下代码：(这里用的原博的js)12345678910111213141516171819202122232425&lt;script&gt; function GetRandomNum(Min,Max) &#123; var Range = Max - Min; var Rand = Math.random(); return(Min + Math.round(Rand * Range)); &#125;function setSidebarMarginTop (headerOffset) &#123; return $('#sidebar').css(&#123; 'margin-top': headerOffset &#125;); &#125; function getHeaderOffset () &#123; return $('.header-inner').height() + CONFIG.sidebar.offset; &#125; window.onload=function()&#123; var subtitle = "&#123;&#123;config.subtitle&#125;&#125;"; var mytitle = subtitle.split("W"); var max = mytitle.length-1; var index = GetRandomNum(0,max); var text = mytitle[index]; $("#helloTitle").html(text); var headOffset = getHeaderOffset(); setSidebarMarginTop(headOffset); //动态subtitle设置 &#125;&lt;/script&gt;然后修改brand.swig的部分代码找到1234567&#123;% if subtitle %&#125; &#123;% if theme.seo %&#125; ... &#123;% else %&#125; ... &#123;% endif %&#125;&#123;% endif %&#125;把这一段，把原来的修改成以下代码即可ps: title和subtitle的字体还有颜色也可以在这个文件修改，即使用style标签，按个人爱好修改也可不要。1234567&#123;% if subtitle %&#125; &#123;% if theme.seo %&#125; &lt;p class="site-subtitle" id="helloTitle" itemprop="description"&gt;&lt;/p&gt; &#123;% else %&#125; &lt;p id="helloTitle" class="site-subtitle"&gt;&lt;/p&gt; &#123;% endif %&#125;&#123;% endif %&#125;之后部署后每次刷新就可以看到不同的subtitle了，开心😀效果详见：https://lruihao.cn]]></content>
+    <content type="text"><![CDATA[本文适合我这种纯小白。目前为止，全网也就只有一个博主写到过这样动态显示subtitle的文章。传送门（关键词：js,后加载）但是嘞，该博写的不怎么详细，17年底写的。当然更大的可能是next更新了一些文件结构，所以不适合现在使用了。以前我按原博的流程配置了一下没成功就搁在那里了，今天突然心血来潮。翻了翻原博主博客的源码，再与自己的对比了一下，发现了一些端倪。稍作调整后如下：修改站点配置文件，主要修改subtitle1subtitle: 不怕万人阻挡，只怕自己投降。W你如何回忆，决定你是一个怎样的人！W这是一个句子。W这是另一个句子。W这些句子你们不要搞一样的不然怎么叫个性签名-_-！。句子与句子之间以W分割，后续需要根据该标志位去拆分句子组。小伙伴们博主这里只是提供一个思路，不要和我用一模一样的啊，不然撞了多尴尬呀修改themes\next\layout_partials\header下面的index.swig文件。在最开头添加如下代码：(这里用的原博的js)12345678910111213141516171819202122232425&lt;script&gt; function GetRandomNum(Min,Max) &#123; var Range = Max - Min; var Rand = Math.random(); return(Min + Math.round(Rand * Range)); &#125;function setSidebarMarginTop (headerOffset) &#123; return $('#sidebar').css(&#123; 'margin-top': headerOffset &#125;); &#125; function getHeaderOffset () &#123; return $('.header-inner').height() + CONFIG.sidebar.offset; &#125; window.onload=function()&#123; var subtitle = "&#123;&#123;config.subtitle&#125;&#125;"; var mytitle = subtitle.split("W"); var max = mytitle.length-1; var index = GetRandomNum(0,max); var text = mytitle[index]; $("#helloTitle").html(text); var headOffset = getHeaderOffset(); setSidebarMarginTop(headOffset); //动态subtitle设置 &#125;&lt;/script&gt;然后修改brand.swig的部分代码找到1234567&#123;% if subtitle %&#125; &#123;% if theme.seo %&#125; ... &#123;% else %&#125; ... &#123;% endif %&#125;&#123;% endif %&#125;把这一段，把原来的修改成以下代码即可ps: title和subtitle的字体还有颜色也可以在这个文件修改，即使用style标签，按个人爱好修改也可不要。1234567&#123;% if subtitle %&#125; &#123;% if theme.seo %&#125; &lt;p class="site-subtitle" id="helloTitle" itemprop="description"&gt;&lt;/p&gt; &#123;% else %&#125; &lt;p id="helloTitle" class="site-subtitle"&gt;&lt;/p&gt; &#123;% endif %&#125;&#123;% endif %&#125;之后部署后每次刷新就可以看到不同的subtitle了，开心😀效果详见：https://lruihao.cn]]></content>
       <categories>
         <category>hexo博客</category>
       </categories>
@@ -70,8 +70,8 @@
       <tags>
         <tag>ACM</tag>
         <tag>数学</tag>
-        <tag>Nowcoder</tag>
         <tag>组合数学</tag>
+        <tag>Nowcoder</tag>
       </tags>
   </entry>
   <entry>
@@ -82,8 +82,8 @@
         <category>数学</category>
       </categories>
       <tags>
-        <tag>ACM</tag>
         <tag>Codeforces</tag>
+        <tag>ACM</tag>
         <tag>数学</tag>
       </tags>
   </entry>
@@ -96,8 +96,8 @@
         <category>组合数学</category>
       </categories>
       <tags>
-        <tag>ACM</tag>
         <tag>Codeforces</tag>
+        <tag>ACM</tag>
         <tag>数学</tag>
         <tag>组合数学</tag>
       </tags>
@@ -140,8 +140,8 @@
         <category>ACM</category>
       </categories>
       <tags>
-        <tag>ACM</tag>
         <tag>Codeforces</tag>
+        <tag>ACM</tag>
         <tag>组合数学</tag>
       </tags>
   </entry>
@@ -325,8 +325,8 @@
         <category>ACM</category>
       </categories>
       <tags>
-        <tag>ACM</tag>
         <tag>Codeforces</tag>
+        <tag>ACM</tag>
       </tags>
   </entry>
   <entry>
@@ -337,8 +337,8 @@
         <category>ACM</category>
       </categories>
       <tags>
-        <tag>ACM</tag>
         <tag>Codeforces</tag>
+        <tag>ACM</tag>
       </tags>
   </entry>
   <entry>
@@ -391,8 +391,8 @@
         <category>ACM</category>
       </categories>
       <tags>
-        <tag>ACM</tag>
         <tag>Codeforces</tag>
+        <tag>ACM</tag>
       </tags>
   </entry>
   <entry>
@@ -424,7 +424,7 @@
   <entry>
     <title><![CDATA[BUG那些事]]></title>
     <url>%2Fbugs.html</url>
-    <content type="text"><![CDATA[日常BUG记录，欢迎大家找出其他bug!杂七杂八使用hexo-all-minifier压缩博文，导致打赏button失效；原因：压缩倒是button那块div，有一个叫&#39;QR&#39;的id,压缩后变成小写&#39; qr&#39;解决方法：取消html或js压缩；或者取消压缩打赏文件reward.swig（未测试）；打开reward.swig把第三行中的document.getElementById(&#39;QR&#39;);改为document.getElementById(&amp;quot;QR&amp;quot;);；评论gitalk评论插件，由于我没有对文章标题id进行md5等转码，所以在较长标题博客下可能造成github登录失败等原因以至于无法评论，所以评论不太友好，大佬略过，这个bug目前我不打算修复(我换了gitment评论)，懒！然后如果实在有啥问题可以在右边栏的在线客服那里在线联系我，也可以加上面的联系方式联系我！（我也是小白哈哈哈哈哈！）gitment bug，解决gitalk大部分问题，但是还是存在以下问题：手机浏览器无法登陆的问题，目测手机浏览器对文章标题转码导致。解决方案：去一篇标题短的文章下面登陆再回来评论。文章标题还是不能太长，我并没有将id做转码缩短处理，只是对github中文lable简单地处理了一下。gitment在我双线部署后，被我抛弃了，其实我挺喜欢gitment的Markdown语法功能的，但是比较适合github.io这种域名的，主要是登陆问题，我觉得是返回值啥的，gitment的仓库在github上。就这样吧，用来必力评论吧，虽然是韩国的，加载会慢点，不过没关系，反正没人评论，都是我自己记录，足够了！！！彩蛋www.lruihao.cn和lruihao.cn的评论是不一样的在留言页面地址后面加/index.html ,这个的隐藏评论区hhhh，同样有第一种的区别无论哪个域名，在主页后加“ /love ”,可以看到我和女票的一些小故事当然有密码的hhhh由于入口隐藏，所以比较隐蔽，算彩蛋也算bug吧，有时候利用这些bug写写东西也不错，就这样吧！按下F12打开浏览器调试工具，在console可以看到一些“有趣”的东西- _ -!还有好多好多bug，有bug就有bug吧，不改了，越改越多::&gt; _ &lt;::]]></content>
+    <content type="text"><![CDATA[日常BUG记录，欢迎大家找出其他bug!CPU占用过高前两天收到网友的反馈，说我的网站打开CPU占用80%多，我以前都没想过这些性能问题，突然出现就慌了，一开始怀疑是js的原因，后来又有人反馈截图说他的电脑上正常，不过在win10的电脑上就很高，后来在浏览器中吧js加载关掉就正常了，说明就是js造成的，虽然不懂js，不过为了解决这个致命的问题还是硬着头皮，在翻next源码中，自己用过的js,翻了一整天没找出结果，期间还麻烦晓剑帮我找了。知道今天又找了一上午才找到，罪魁祸首，是next提供的动态壁纸，后来测试了一下，那些动态壁纸都会让CPU飚起来，不知道是我改了什么源码的原因，还是静态壁纸和动态壁纸不能一起用的原因。不过总之这个问题吧已经解决，开心。杂七杂八使用hexo-all-minifier压缩博文，导致打赏button失效；原因：压缩倒是button那块div，有一个叫&#39;QR&#39;的id,压缩后变成小写&#39; qr&#39;解决方法：取消html或js压缩；或者取消压缩打赏文件reward.swig（未测试）；打开reward.swig把第三行中的document.getElementById(&#39;QR&#39;);改为document.getElementById(&amp;quot;QR&amp;quot;);；评论gitalk评论插件，由于我没有对文章标题id进行md5等转码，所以在较长标题博客下可能造成github登录失败等原因以至于无法评论，所以评论不太友好，大佬略过，这个bug目前我不打算修复(我换了gitment评论)，懒！然后如果实在有啥问题可以在右边栏的在线客服那里在线联系我，也可以加上面的联系方式联系我！（我也是小白哈哈哈哈哈！）gitment bug，解决gitalk大部分问题，但是还是存在以下问题：手机浏览器无法登陆的问题，目测手机浏览器对文章标题转码导致。解决方案：去一篇标题短的文章下面登陆再回来评论。文章标题还是不能太长，我并没有将id做转码缩短处理，只是对github中文lable简单地处理了一下。gitment在我双线部署后，被我抛弃了，其实我挺喜欢gitment的Markdown语法功能的，但是比较适合github.io这种域名的，主要是登陆问题，我觉得是返回值啥的，gitment的仓库在github上。就这样吧，用来必力评论吧，虽然是韩国的，加载会慢点，不过没关系，反正没人评论，都是我自己记录，足够了！！！彩蛋www.lruihao.cn和lruihao.cn的评论是不一样的在留言页面地址后面加/index.html ,这个的隐藏评论区hhhh，同样有第一种的区别无论哪个域名，在主页后加“ /love ”,可以看到我和女票的一些小故事当然有密码的hhhh由于入口隐藏，所以比较隐蔽，算彩蛋也算bug吧，有时候利用这些bug写写东西也不错，就这样吧！按下F12打开浏览器调试工具，在console可以看到一些“有趣”的东西- _ -!还有好多好多bug，有bug就有bug吧，不改了，越改越多::&gt; _ &lt;::]]></content>
       <categories>
         <category>通用</category>
       </categories>
@@ -540,8 +540,8 @@
         <category>ACM</category>
       </categories>
       <tags>
-        <tag>ACM</tag>
         <tag>Codeforces</tag>
+        <tag>ACM</tag>
       </tags>
   </entry>
   <entry>
@@ -618,8 +618,8 @@
         <category>ACM</category>
       </categories>
       <tags>
-        <tag>ACM</tag>
         <tag>Codeforces</tag>
+        <tag>ACM</tag>
       </tags>
   </entry>
   <entry>
@@ -646,8 +646,8 @@
         <category>背包问题</category>
       </categories>
       <tags>
-        <tag>背包问题</tag>
         <tag>Nowcoder</tag>
+        <tag>背包问题</tag>
       </tags>
   </entry>
   <entry>
@@ -659,8 +659,8 @@
       </categories>
       <tags>
         <tag>ACM</tag>
-        <tag>Nowcoder</tag>
         <tag>组合数学</tag>
+        <tag>Nowcoder</tag>
       </tags>
   </entry>
   <entry>
@@ -704,8 +704,8 @@
         <category>2018湘潭邀请赛</category>
       </categories>
       <tags>
-        <tag>2018湘潭邀请赛</tag>
         <tag>ACM</tag>
+        <tag>2018湘潭邀请赛</tag>
         <tag>总结</tag>
       </tags>
   </entry>
@@ -718,8 +718,8 @@
         <category>2018湘潭邀请赛</category>
       </categories>
       <tags>
-        <tag>2018湘潭邀请赛</tag>
         <tag>ACM</tag>
+        <tag>2018湘潭邀请赛</tag>
       </tags>
   </entry>
   <entry>
@@ -731,8 +731,8 @@
         <category>2018湘潭邀请赛</category>
       </categories>
       <tags>
-        <tag>2018湘潭邀请赛</tag>
         <tag>ACM</tag>
+        <tag>2018湘潭邀请赛</tag>
       </tags>
   </entry>
   <entry>
@@ -744,8 +744,8 @@
         <category>2018湘潭邀请赛</category>
       </categories>
       <tags>
-        <tag>2018湘潭邀请赛</tag>
         <tag>ACM</tag>
+        <tag>2018湘潭邀请赛</tag>
       </tags>
   </entry>
   <entry>
@@ -757,8 +757,8 @@
         <category>2018湘潭邀请赛</category>
       </categories>
       <tags>
-        <tag>2018湘潭邀请赛</tag>
         <tag>ACM</tag>
+        <tag>2018湘潭邀请赛</tag>
       </tags>
   </entry>
   <entry>
@@ -839,7 +839,7 @@
   <entry>
     <title><![CDATA[光]]></title>
     <url>%2F%E5%85%89.html</url>
-    <content type="text"><![CDATA[我们的光明！ Incorrect Password! No content to display! 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]]></content>
+    <content type="text"><![CDATA[我们的光明！ Incorrect Password! No content to display! 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]]></content>
       <categories>
         <category>生活随笔</category>
       </categories>
@@ -861,7 +861,7 @@
   <entry>
     <title><![CDATA[hexo+github搭建个人博客及美化]]></title>
     <url>%2Fhexo%20%2B%20github%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2.html</url>
-    <content type="text"><![CDATA[首先官方文档是我们的第一手资料，也是最好的。安装 Hexo 相当简单。然而在安装前，您必须检查电脑中是否已安装下列应用程序：· Node.js· Githexo安装如果您的电脑中已经安装上述必备程序，那么恭喜您！接下来只需要使用 npm 即可完成 Hexo 的安装。1$ npm install -g hexo-cli建站安装 Hexo 完成后，请执行下列命令，Hexo 将会在指定文件夹中新建所需要的文件。123$ hexo init &lt;folder&gt;$ cd &lt;folder&gt;$ npm install为一个文件夹的名字新建完成后，指定文件夹的目录如下：12345678.├── _config.yml├── package.json├── scaffolds├── source| ├── _drafts| └── _posts└── themes安装hexo插件全装上吧，没事。。。12345678910111213$ npm install hexo-generator-index --save$ npm install hexo-generator-archive --save$ npm install hexo-generator-category --save$ npm install hexo-generator-tag --save$ npm install hexo-server --save$ npm install hexo-deployer-git --save$ npm install hexo-deployer-heroku --save$ npm install hexo-deployer-rsync --save$ npm install hexo-deployer-openshift --save$ npm install hexo-renderer-marked@0.2 --save$ npm install hexo-renderer-stylus@0.2 --save$ npm install hexo-generator-feed@1 --save$ npm install hexo-generator-sitemap@1 --save本地查看效果执行下面语句，执行完再登录localhost:4000查看效果（执行完不要按Ctrl+C，不然就停止了）12$ hexo g$ hexo s其他步骤在这里不赘述，参见超详细教程传送门部署1$ hexo g -d部署后我们可以浏览器搜 username.github.io 查看自己的博客效果，，比如我的lruihao.github.io美化valine特别鸣谢赵俊👍asdfv1929hexo官方主题集合，我用的是aloha主题，该主题官方文档hexo个性化教程说说我的主题遇到的一些问题，由于这个主题用的人少，所以作者优化的不是很好（next使用最多），当然也可以反过来说，所以自己美化了一点后改用next主题about页面about页面可以用HTML写，你想怎么写都行，我用的最简单的方法，直接hexo n page &quot;about&quot;后，会生成一个md文件，也就是后面说的文章，直接写文章就行了。添加搜索，评论，分享参考algolia参考文件邱承佳学长博文让搜索引擎找到你的博客，还是看到邱承佳学长博文有写到传送门添加访客数，阅读量等评论有多说（多说好像挂了），计数有不蒜，我用的不蒜子，还有其他的。。。文章阅读量以下适合非next主题的部分主题，next主题已经自带，到主题配置文件修改就好了。打开以下路径在你喜欢的地方添加代码，\blog\hexo\themes\主题名字\layout_partial，找到article.ejs文件1234&lt;div align="left"&gt;&lt;span id="busuanzi_container_page_pv"&gt; 本文总阅读量&lt;span id="busuanzi_value_page_pv"&gt;&lt;/span&gt;次 &lt;/span&gt;&lt;/div&gt;站点访问量，访客数打开以下路径在你喜欢的地方添加代码，\blog\hexo\themes\主题名字\layout_partial，找到footer.ejs文件123456789&lt;script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"&gt;&lt;/script&gt;&lt;span id="busuanzi_container_page_pv"&gt; 本站总访问量&lt;span id="busuanzi_value_site_pv"&gt;&lt;/span&gt;次 | &lt;/span&gt;&lt;span id="busuanzi_container_site_uv"&gt; 本站访客数&lt;span id="busuanzi_value_site_uv"&gt;&lt;/span&gt;人次&lt;/span&gt;写文章hexo文章用轻量型标签语言Markdown编写·markdown入门·繁体原始文件·繁体原始文件github·简体中文文件]]></content>
+    <content type="text"><![CDATA[首先官方文档是我们的第一手资料，也是最好的。安装 Hexo 相当简单。然而在安装前，您必须检查电脑中是否已安装下列应用程序：Node.jsGithexo安装如果您的电脑中已经安装上述必备程序，那么恭喜您！接下来只需要使用 npm 即可完成 Hexo 的安装。1$ npm install -g hexo-cli建站安装 Hexo 完成后，请执行下列命令，Hexo 将会在指定文件夹中新建所需要的文件。123$ hexo init &lt;folder&gt;$ cd &lt;folder&gt;$ npm install为一个文件夹的名字新建完成后，指定文件夹的目录如下：12345678.├── _config.yml├── package.json├── scaffolds├── source| ├── _drafts| └── _posts└── themes安装hexo插件全装上吧，没事。。。12345678910111213$ npm install hexo-generator-index --save$ npm install hexo-generator-archive --save$ npm install hexo-generator-category --save$ npm install hexo-generator-tag --save$ npm install hexo-server --save$ npm install hexo-deployer-git --save$ npm install hexo-deployer-heroku --save$ npm install hexo-deployer-rsync --save$ npm install hexo-deployer-openshift --save$ npm install hexo-renderer-marked@0.2 --save$ npm install hexo-renderer-stylus@0.2 --save$ npm install hexo-generator-feed@1 --save$ npm install hexo-generator-sitemap@1 --save本地查看效果执行下面语句，执行完再登录localhost:4000查看效果（执行完不要按Ctrl+C，不然就停止了）12$ hexo g$ hexo s其他步骤在这里不赘述，参见超详细教程传送门部署1$ hexo g -d部署后我们可以浏览器搜 username.github.io 查看自己的博客效果，，比如我的lruihao.github.io美化valine特别鸣谢赵俊👍asdfv1929hexo官方主题集合，我用的是aloha主题，该主题官方文档hexo个性化教程说说我的主题遇到的一些问题，由于这个主题用的人少，所以作者优化的不是很好（next使用最多），当然也可以反过来说，所以自己美化了一点后改用next主题about页面about页面可以用HTML写，你想怎么写都行，我用的最简单的方法，直接hexo n page &quot;about&quot;后，会生成一个md文件，也就是后面说的文章，直接写文章就行了。添加搜索，评论，分享参考algolia参考文件邱承佳学长博文让搜索引擎找到你的博客，还是看到邱承佳学长博文有写到传送门添加访客数，阅读量等评论有多说（多说好像挂了），计数有不蒜，我用的不蒜子，还有其他的。。。文章阅读量以下适合非next主题的部分主题，next主题已经自带，到主题配置文件修改就好了。打开以下路径在你喜欢的地方添加代码，\blog\hexo\themes\主题名字\layout_partial，找到article.ejs文件1234&lt;div align="left"&gt;&lt;span id="busuanzi_container_page_pv"&gt; 本文总阅读量&lt;span id="busuanzi_value_page_pv"&gt;&lt;/span&gt;次 &lt;/span&gt;&lt;/div&gt;站点访问量，访客数打开以下路径在你喜欢的地方添加代码，\blog\hexo\themes\主题名字\layout_partial，找到footer.ejs文件123456789&lt;script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"&gt;&lt;/script&gt;&lt;span id="busuanzi_container_page_pv"&gt; 本站总访问量&lt;span id="busuanzi_value_site_pv"&gt;&lt;/span&gt;次 | &lt;/span&gt;&lt;span id="busuanzi_container_site_uv"&gt; 本站访客数&lt;span id="busuanzi_value_site_uv"&gt;&lt;/span&gt;人次&lt;/span&gt;写文章hexo文章用轻量型标签语言Markdown编写markdown入门繁体原始文件繁体原始文件github简体中文文件]]></content>
       <categories>
         <category>hexo博客</category>
       </categories>
