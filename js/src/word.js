@@ -1,1 +1,0 @@
-var a_idx=0;jQuery(document).ready(function(a){a("body").click(function(e){var o=new Array("李瑞豪","牛逼");var t=a("<span/>").text(o[a_idx]);a_idx=(a_idx+1)%o.length;var n=e.pageX,i=e.pageY;t.css({"z-index":1e69,top:i-20,left:n,position:"absolute","font-weight":"bold",color:"#FF00FF"});a("body").append(t);t.animate({top:i-180,opacity:0},1500,function(){t.remove()})})});
