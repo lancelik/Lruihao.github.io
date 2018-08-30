@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://lruihao.cn/termux.html</loc>
+    
+    <lastmod>2018-08-30T04:05:59.311Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://lruihao.cn/links.html</loc>
     
-    <lastmod>2018-08-29T11:49:35.002Z</lastmod>
+    <lastmod>2018-08-29T13:12:53.537Z</lastmod>
     
   </url>
   
@@ -201,13 +208,6 @@
     <loc>https://lruihao.cn/console-log.html</loc>
     
     <lastmod>2018-08-11T14:06:29.926Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://lruihao.cn/termux.html</loc>
-    
-    <lastmod>2018-08-11T09:15:37.425Z</lastmod>
     
   </url>
   
