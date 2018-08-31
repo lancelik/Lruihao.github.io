@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>博採眾長</title>
   
-  <subtitle>不怕万人阻挡，只怕自己投降。W你如何回忆，决定你是一个怎样的人。W人生当苦无妨，良人当归即可。W世间文字八万个，唯有情字最杀人。W逝者如斯乎，不舍昼夜。W你别出现在我黎明的梦里，我怕我醒来就抱不到你。W心向大佬，披荆斩棘。</subtitle>
+  <subtitle>不怕万人阻挡，只怕自己投降。W你如何回忆，决定你是一个怎样的人。W人生当苦无妨，良人当归即可。W逝者如斯乎，不舍昼夜。W你别出现在我黎明的梦里，我怕我醒来就抱不到你。W心向大佬，披荆斩棘。W兼收并蓄，博采众长。</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://lruihao.cn/"/>
@@ -226,9 +226,9 @@
     
       <category term="数学" scheme="https://lruihao.cn/tags/%E6%95%B0%E5%AD%A6/"/>
     
-      <category term="Nowcoder" scheme="https://lruihao.cn/tags/Nowcoder/"/>
-    
       <category term="组合数学" scheme="https://lruihao.cn/tags/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/"/>
+    
+      <category term="Nowcoder" scheme="https://lruihao.cn/tags/Nowcoder/"/>
     
   </entry>
   
@@ -253,9 +253,9 @@
       <category term="数学" scheme="https://lruihao.cn/categories/%E6%95%B0%E5%AD%A6/"/>
     
     
-      <category term="ACM" scheme="https://lruihao.cn/tags/ACM/"/>
-    
       <category term="Codeforces" scheme="https://lruihao.cn/tags/Codeforces/"/>
+    
+      <category term="ACM" scheme="https://lruihao.cn/tags/ACM/"/>
     
       <category term="数学" scheme="https://lruihao.cn/tags/%E6%95%B0%E5%AD%A6/"/>
     
@@ -284,9 +284,9 @@
       <category term="组合数学" scheme="https://lruihao.cn/categories/%E6%95%B0%E5%AD%A6/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/"/>
     
     
-      <category term="ACM" scheme="https://lruihao.cn/tags/ACM/"/>
-    
       <category term="Codeforces" scheme="https://lruihao.cn/tags/Codeforces/"/>
+    
+      <category term="ACM" scheme="https://lruihao.cn/tags/ACM/"/>
     
       <category term="数学" scheme="https://lruihao.cn/tags/%E6%95%B0%E5%AD%A6/"/>
     
@@ -375,9 +375,9 @@
       <category term="ACM" scheme="https://lruihao.cn/categories/ACM/"/>
     
     
-      <category term="ACM" scheme="https://lruihao.cn/tags/ACM/"/>
-    
       <category term="Codeforces" scheme="https://lruihao.cn/tags/Codeforces/"/>
+    
+      <category term="ACM" scheme="https://lruihao.cn/tags/ACM/"/>
     
       <category term="组合数学" scheme="https://lruihao.cn/tags/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/"/>
     
