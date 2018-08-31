@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://lruihao.cn/"/>
-  <updated>2018-08-31T04:36:58.700Z</updated>
+  <updated>2018-08-31T15:00:20.641Z</updated>
   <id>https://lruihao.cn/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>　</title>
+    <link href="https://lruihao.cn/only-you.html"/>
+    <id>https://lruihao.cn/only-you.html</id>
+    <published>2018-08-31T14:17:04.000Z</published>
+    <updated>2018-08-31T15:00:20.641Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/only-you/0.jpg" alt="only-you"></p><a id="more"></a><div class="note danger"><p>未出井时，只知天仅井口大。</p><p>未见比你好之人时，也只知你，而不知其他。</p><p>井口之天，若投所好，纵死，甘为井中蛙。</p><p>—— 灿</p></div>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;/only-you/0.jpg&quot; alt=&quot;only-you&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="生活随笔" scheme="https://lruihao.cn/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="生活随笔" scheme="https://lruihao.cn/tags/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
   
   <entry>
     <title>linux系统进入退出vim编辑器及termux修改问候语</title>
@@ -226,9 +248,9 @@
     
       <category term="数学" scheme="https://lruihao.cn/tags/%E6%95%B0%E5%AD%A6/"/>
     
-      <category term="组合数学" scheme="https://lruihao.cn/tags/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/"/>
-    
       <category term="Nowcoder" scheme="https://lruihao.cn/tags/Nowcoder/"/>
+    
+      <category term="组合数学" scheme="https://lruihao.cn/tags/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/"/>
     
   </entry>
   
@@ -253,9 +275,9 @@
       <category term="数学" scheme="https://lruihao.cn/categories/%E6%95%B0%E5%AD%A6/"/>
     
     
-      <category term="Codeforces" scheme="https://lruihao.cn/tags/Codeforces/"/>
-    
       <category term="ACM" scheme="https://lruihao.cn/tags/ACM/"/>
+    
+      <category term="Codeforces" scheme="https://lruihao.cn/tags/Codeforces/"/>
     
       <category term="数学" scheme="https://lruihao.cn/tags/%E6%95%B0%E5%AD%A6/"/>
     
@@ -284,9 +306,9 @@
       <category term="组合数学" scheme="https://lruihao.cn/categories/%E6%95%B0%E5%AD%A6/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/"/>
     
     
-      <category term="Codeforces" scheme="https://lruihao.cn/tags/Codeforces/"/>
-    
       <category term="ACM" scheme="https://lruihao.cn/tags/ACM/"/>
+    
+      <category term="Codeforces" scheme="https://lruihao.cn/tags/Codeforces/"/>
     
       <category term="数学" scheme="https://lruihao.cn/tags/%E6%95%B0%E5%AD%A6/"/>
     
@@ -375,9 +397,9 @@
       <category term="ACM" scheme="https://lruihao.cn/categories/ACM/"/>
     
     
-      <category term="Codeforces" scheme="https://lruihao.cn/tags/Codeforces/"/>
-    
       <category term="ACM" scheme="https://lruihao.cn/tags/ACM/"/>
+    
+      <category term="Codeforces" scheme="https://lruihao.cn/tags/Codeforces/"/>
     
       <category term="组合数学" scheme="https://lruihao.cn/tags/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/"/>
     
@@ -535,35 +557,6 @@
       
       
         &lt;p&gt;对菜鸟来说题目有三种：会算法且能AC的，会算法但不能AC的，不会做的&lt;/p&gt;&lt;p&gt;对大牛来说题目有两种：会做的，不会做的&lt;/p&gt;&lt;p&gt;对教主来说题目有两种：能AC的，数据有错的&lt;/p&gt;&lt;p&gt;菜鸟提交WA了，找了N久找不出错时，在论坛大骂数据有错，但是没人理&lt;/p&gt;&lt;p&gt;大牛
-      
-    
-    </summary>
-    
-      <category term="ACM" scheme="https://lruihao.cn/categories/ACM/"/>
-    
-      <category term="sth for fu&amp;king acm" scheme="https://lruihao.cn/categories/ACM/sth-for-fu-king-acm/"/>
-    
-    
-      <category term="生活随笔" scheme="https://lruihao.cn/tags/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/"/>
-    
-      <category term="sth for fu&amp;king acm" scheme="https://lruihao.cn/tags/sth-for-fu-king-acm/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>你搞图论有毛用啊！！(转)</title>
-    <link href="https://lruihao.cn/fucking3.html"/>
-    <id>https://lruihao.cn/fucking3.html</id>
-    <published>2018-08-03T03:39:46.000Z</published>
-    <updated>2018-08-03T03:40:44.309Z</updated>
-    
-    <content type="html"><![CDATA[<p>你搞图论有毛用啊！！</p><p>搞了你也不一定能看懂！</p><p>看懂了你也不一定能深刻理解！</p><p>理解了你也不一定完全敲出代码！！</p><p>敲出代码考试的时候也不一定能出图论的题！！</p><p>出了图论的题你也不一定能看出来！！</p><p>看出来你也不一定能按要求敲出来！</p><p>按要求敲出来你也不一定能跑出结果！！</p><p>跑出结果你也不一定能AC！！</p><p>能AC你也不一定能拿到奖！！</p><p>拿到奖你也不一定能进区域赛！</p><p>进了区域赛指定就是被虐！！</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;你搞图论有毛用啊！！&lt;/p&gt;&lt;p&gt;搞了你也不一定能看懂！&lt;/p&gt;&lt;p&gt;看懂了你也不一定能深刻理解！&lt;/p&gt;&lt;p&gt;理解了你也不一定完全敲出代码！！&lt;/p&gt;&lt;p&gt;敲出代码考试的时候也不一定能出图论的题！！&lt;/p&gt;&lt;p&gt;出了图论的题你也不一定能看出来！！&lt;/p&gt;&lt;p&gt;看出来你也不
       
     
     </summary>
