@@ -2,16 +2,58 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://lruihao.cn/only-you.html</loc>
+    <loc>https://lruihao.cn/termux.html</loc>
     
-    <lastmod>2018-08-31T15:00:20.641Z</lastmod>
+    <lastmod>2018-09-01T03:12:32.861Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://lruihao.cn/hexo%20+%20github%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2.html</loc>
+    
+    <lastmod>2018-09-01T03:09:52.776Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://lruihao.cn/hexo-%E6%B7%BB%E5%8A%A0%E5%9B%BE%E7%89%87%EF%BC%8C%E9%9F%B3%E4%B9%90%EF%BC%8C%E9%93%BE%E6%8E%A5%EF%BC%8C%E8%A7%86%E9%A2%91.html</loc>
+    
+    <lastmod>2018-09-01T03:07:18.612Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://lruihao.cn/links.html</loc>
     
-    <lastmod>2018-08-31T14:31:34.387Z</lastmod>
+    <lastmod>2018-09-01T03:06:04.669Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://lruihao.cn/bugs.html</loc>
+    
+    <lastmod>2018-09-01T03:04:40.219Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://lruihao.cn/dongtaisub.html</loc>
+    
+    <lastmod>2018-09-01T03:01:26.074Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://lruihao.cn/hexo-wordcount.html</loc>
+    
+    <lastmod>2018-09-01T03:01:04.227Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://lruihao.cn/only-you.html</loc>
+    
+    <lastmod>2018-08-31T15:00:20.641Z</lastmod>
     
   </url>
   
@@ -26,20 +68,6 @@
     <loc>https://lruihao.cn/vim.html</loc>
     
     <lastmod>2018-08-31T04:36:58.700Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://lruihao.cn/hexo-wordcount.html</loc>
-    
-    <lastmod>2018-08-30T05:59:53.299Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://lruihao.cn/termux.html</loc>
-    
-    <lastmod>2018-08-30T04:11:42.030Z</lastmod>
     
   </url>
   
@@ -68,27 +96,6 @@
     <loc>https://lruihao.cn/guestbook/index.html</loc>
     
     <lastmod>2018-08-28T08:41:45.576Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://lruihao.cn/bugs.html</loc>
-    
-    <lastmod>2018-08-28T08:23:26.657Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://lruihao.cn/dongtaisub.html</loc>
-    
-    <lastmod>2018-08-28T08:08:17.171Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://lruihao.cn/hexo%20+%20github%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2.html</loc>
-    
-    <lastmod>2018-08-28T07:27:55.389Z</lastmod>
     
   </url>
   
@@ -201,13 +208,6 @@
     <loc>https://lruihao.cn/games/2048.html</loc>
     
     <lastmod>2018-08-21T03:18:59.231Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://lruihao.cn/hexo-%E6%B7%BB%E5%8A%A0%E5%9B%BE%E7%89%87%EF%BC%8C%E9%9F%B3%E4%B9%90%EF%BC%8C%E9%93%BE%E6%8E%A5%EF%BC%8C%E8%A7%86%E9%A2%91.html</loc>
-    
-    <lastmod>2018-08-17T03:31:17.794Z</lastmod>
     
   </url>
   
