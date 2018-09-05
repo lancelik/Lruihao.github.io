@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://lruihao.cn/links.html</loc>
+    
+    <lastmod>2018-09-05T15:21:47.844Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://lruihao.cn/csdn/index.html</loc>
+    
+    <lastmod>2018-09-04T09:27:29.424Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://lruihao.cn/termux.html</loc>
     
     <lastmod>2018-09-01T03:12:32.861Z</lastmod>
@@ -19,13 +33,6 @@
     <loc>https://lruihao.cn/hexo-%E6%B7%BB%E5%8A%A0%E5%9B%BE%E7%89%87%EF%BC%8C%E9%9F%B3%E4%B9%90%EF%BC%8C%E9%93%BE%E6%8E%A5%EF%BC%8C%E8%A7%86%E9%A2%91.html</loc>
     
     <lastmod>2018-09-01T03:07:18.612Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://lruihao.cn/links.html</loc>
-    
-    <lastmod>2018-09-01T03:06:04.669Z</lastmod>
     
   </url>
   
@@ -82,13 +89,6 @@
     <loc>https://lruihao.cn/heart.html</loc>
     
     <lastmod>2018-08-29T11:18:51.581Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://lruihao.cn/csdn/index.html</loc>
-    
-    <lastmod>2018-08-28T08:48:30.043Z</lastmod>
     
   </url>
   
