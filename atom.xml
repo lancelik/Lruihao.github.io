@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://lruihao.cn/"/>
-  <updated>2018-08-31T15:00:20.641Z</updated>
+  <updated>2018-09-05T15:38:37.174Z</updated>
   <id>https://lruihao.cn/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>day-100</title>
+    <link href="https://lruihao.cn/day-100.html"/>
+    <id>https://lruihao.cn/day-100.html</id>
+    <published>2018-09-05T15:32:52.000Z</published>
+    <updated>2018-09-05T15:38:37.174Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/day-100/100.png" alt="100天"></p><a id="more"></a><p><strong>突然一看，搭建这个博客网站已经过去100天了，100天过去浏览量过万，还不错的样子（不过大多都是熟人在看，当然也有一些网友在看，这是值得高兴的），继续加油，好好学习！</strong></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;/day-100/100.png&quot; alt=&quot;100天&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="生活随笔" scheme="https://lruihao.cn/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="生活随笔" scheme="https://lruihao.cn/tags/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
   
   <entry>
     <title>　</title>
@@ -531,35 +553,6 @@
       <category term="ACM" scheme="https://lruihao.cn/tags/ACM/"/>
     
       <category term="最短路" scheme="https://lruihao.cn/tags/%E6%9C%80%E7%9F%AD%E8%B7%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>菜鸟，大牛和教主，三者的区别(转)</title>
-    <link href="https://lruihao.cn/fucking4.html"/>
-    <id>https://lruihao.cn/fucking4.html</id>
-    <published>2018-08-03T03:39:57.000Z</published>
-    <updated>2018-08-03T03:44:10.428Z</updated>
-    
-    <content type="html"><![CDATA[<p>对菜鸟来说题目有三种：会算法且能AC的，会算法但不能AC的，不会做的</p><p>对大牛来说题目有两种：会做的，不会做的</p><p>对教主来说题目有两种：能AC的，数据有错的</p><p>菜鸟提交WA了，找了N久找不出错时，在论坛大骂数据有错，但是没人理</p><p>大牛提交WA了，找了N久找不出错时，写暴力程序或者求别人的AC程序对拍</p><p>教主提交WA了，Judge马上修正数据</p><p>菜鸟面对一道难题，直接暴搜</p><p>大牛面对一道难题，算了算时间复杂度不对，或者证明出是NP难，果断放弃</p><p>教主面对一道难题，说，虽然我不会做，但AC还是没有问题的</p><p>菜鸟AC了一道难题，巴不得召告天下</p><p>大牛AC了一道难题，会写一篇解题报告，第一句话一定是：这题其实不难</p><p>教主AC了一道难题，好像什么都没发生过</p><p>菜鸟切OJ，只挑简单题做</p><p>大牛切OJ，成套成套地做</p><p>教主早就不切OJ了</p><p>菜鸟经常在论坛和QQ上求助</p><p>大牛经常在论坛和QQ上灌水</p><p>教主一般不露面</p><p>菜鸟喜欢说自己做了几十几百道题</p><p>大牛喜欢说自己把某个OJ做了百分之八九十</p><p>教主一般不说话</p><p>菜鸟队看到场上90%的队伍挂起了红球，开始找红球是哪道题</p><p>大牛队全场第一个挂起黄球，然后发现几乎同时有另外几支大牛队也挂起了黄球</p><p>教主队全场第一个挂起绿球，然后全场到最后也只有一个绿球</p><p>菜鸟喜欢搜集各种模板</p><p>大牛只用自己写的模板</p><p>教主不用模板，但他当场写的程序会被别人用作模板</p><p>菜鸟喜欢YY这种分析菜鸟、大牛和教主的区别的文章(没错就是我！- _ -)</p><p>大牛看完这样的文章会笑一笑，懒得回帖</p><p>教主直接无视</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;对菜鸟来说题目有三种：会算法且能AC的，会算法但不能AC的，不会做的&lt;/p&gt;&lt;p&gt;对大牛来说题目有两种：会做的，不会做的&lt;/p&gt;&lt;p&gt;对教主来说题目有两种：能AC的，数据有错的&lt;/p&gt;&lt;p&gt;菜鸟提交WA了，找了N久找不出错时，在论坛大骂数据有错，但是没人理&lt;/p&gt;&lt;p&gt;大牛
-      
-    
-    </summary>
-    
-      <category term="ACM" scheme="https://lruihao.cn/categories/ACM/"/>
-    
-      <category term="sth for fu&amp;king acm" scheme="https://lruihao.cn/categories/ACM/sth-for-fu-king-acm/"/>
-    
-    
-      <category term="生活随笔" scheme="https://lruihao.cn/tags/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/"/>
-    
-      <category term="sth for fu&amp;king acm" scheme="https://lruihao.cn/tags/sth-for-fu-king-acm/"/>
     
   </entry>
   
