@@ -81,9 +81,9 @@
       <category term="通用" scheme="https://lruihao.cn/categories/%E9%80%9A%E7%94%A8/"/>
     
     
-      <category term="linux" scheme="https://lruihao.cn/tags/linux/"/>
-    
       <category term="termux" scheme="https://lruihao.cn/tags/termux/"/>
+    
+      <category term="linux" scheme="https://lruihao.cn/tags/linux/"/>
     
       <category term="vim" scheme="https://lruihao.cn/tags/vim/"/>
     
