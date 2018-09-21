@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://lruihao.cn/"/>
-  <updated>2018-09-05T15:38:37.174Z</updated>
+  <updated>2018-09-21T13:18:03.799Z</updated>
   <id>https://lruihao.cn/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>每一个优秀的人，都有一段沉默的时光</title>
+    <link href="https://lruihao.cn/mood.html"/>
+    <id>https://lruihao.cn/mood.html</id>
+    <published>2018-09-21T13:11:25.000Z</published>
+    <updated>2018-09-21T13:18:03.799Z</updated>
+    
+    <content type="html"><![CDATA[<p>每一个优秀的人，都有一段沉默的时光，是那一段时光，不抱怨不诉苦，最后渡过了这段感动自己的日子。<br>什么都还没有，所以没有卖弄的资格。如果有了什么，就没有卖弄的必要。</p><p>人生的每一笔经历，都在书写你的简历。多做你本以为微不足道的事情，回头看的时候，都有着无法细数的刻度。<br>自己拼出来的东西，和别人送到嘴边的东西，意义和珍惜的程度都大为不同。</p><p>我从不担心我努力了不优秀，只担心优秀的人都比我更努力。<br>决定你高度的是你对自己的要求。</p><p>以前的我，和你一样，常常担心、常常犹豫，可现在我发现，人生的每一个阶段，都需要我们有一种能力同一时间完成很多重要的事情。学习的时候，我们要谈谈恋爱。工作的时候，我们要担心家庭。所以，这是一种平衡的能力。相信我，你做得到。因为，那么那么多学长学姐都走过来了，所以不用怕不用怕，你从来都不是一个人。</p><p>不要抱怨，抱怨永远只能显示你没本事。因为如果你有本事，就可以改变现状，而不只是忍受。既然改变不了，又不够走开，那么就沉默地接受现实。<br>隐忍，是我们抵抗世界的力量，当你拥有，你才有资格自由。</p><p>我们做的每一个决定，都是由自己来买单。而当你可以把自己不喜欢的东西都做好的时候，相信你一定可以把自己喜欢的东西做的更好！<br>努力和效果之间，永远有这样一段距离。成功和失败的唯一区别是，你能不能坚持挺过这段无法估计的距离。</p><p>你可以试试？<br>坚持做一件事情，坚持下去。不管它是什么。<br>选择本身，就是放弃另一种跋涉的可能。尝试倾听自己内心的声音，而不是外在的掌声。 尝试选择适合自己的，而不是别人眼里最好的。 尝试决定我们的决定，不是因为选项表面的光鲜亮丽。 所以，每当我们每做一个选择的时候，总记得兑现心中的对自己的承诺。</p><p>不要想得到一切，对生活对自己都慷慨一些。</p>]]></content>
+    
+    <summary type="html">
+    
+      手机便签里保存的一段话，不记得在哪看到的了。
+    
+    </summary>
+    
+      <category term="生活随笔" scheme="https://lruihao.cn/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="生活随笔" scheme="https://lruihao.cn/tags/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/"/>
+    
+      <category term="心灵鸡汤" scheme="https://lruihao.cn/tags/%E5%BF%83%E7%81%B5%E9%B8%A1%E6%B1%A4/"/>
+    
+  </entry>
   
   <entry>
     <title>day-100</title>
@@ -288,9 +312,9 @@
       <category term="数学" scheme="https://lruihao.cn/categories/%E6%95%B0%E5%AD%A6/"/>
     
     
-      <category term="ACM" scheme="https://lruihao.cn/tags/ACM/"/>
-    
       <category term="Codeforces" scheme="https://lruihao.cn/tags/Codeforces/"/>
+    
+      <category term="ACM" scheme="https://lruihao.cn/tags/ACM/"/>
     
       <category term="数学" scheme="https://lruihao.cn/tags/%E6%95%B0%E5%AD%A6/"/>
     
@@ -319,9 +343,9 @@
       <category term="组合数学" scheme="https://lruihao.cn/categories/%E6%95%B0%E5%AD%A6/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/"/>
     
     
-      <category term="ACM" scheme="https://lruihao.cn/tags/ACM/"/>
-    
       <category term="Codeforces" scheme="https://lruihao.cn/tags/Codeforces/"/>
+    
+      <category term="ACM" scheme="https://lruihao.cn/tags/ACM/"/>
     
       <category term="数学" scheme="https://lruihao.cn/tags/%E6%95%B0%E5%AD%A6/"/>
     
@@ -410,9 +434,9 @@
       <category term="ACM" scheme="https://lruihao.cn/categories/ACM/"/>
     
     
-      <category term="ACM" scheme="https://lruihao.cn/tags/ACM/"/>
-    
       <category term="Codeforces" scheme="https://lruihao.cn/tags/Codeforces/"/>
+    
+      <category term="ACM" scheme="https://lruihao.cn/tags/ACM/"/>
     
       <category term="组合数学" scheme="https://lruihao.cn/tags/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/"/>
     
@@ -512,35 +536,6 @@
       
       
         &lt;p&gt;&lt;a href=&quot;http://poj.org/problem?id=2387&quot; rel=&quot;external nofollow noopener noreferrer&quot; target=&quot;_blank&quot;&gt;题目链接&lt;/a&gt;&lt;/p&gt;&lt;p&gt;题目大意：&lt;br&gt;说的是，一只奶牛位于N号
-      
-    
-    </summary>
-    
-      <category term="ACM" scheme="https://lruihao.cn/categories/ACM/"/>
-    
-      <category term="最短路" scheme="https://lruihao.cn/categories/ACM/%E6%9C%80%E7%9F%AD%E8%B7%AF/"/>
-    
-    
-      <category term="ACM" scheme="https://lruihao.cn/tags/ACM/"/>
-    
-      <category term="最短路" scheme="https://lruihao.cn/tags/%E6%9C%80%E7%9F%AD%E8%B7%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>最短路入门</title>
-    <link href="https://lruihao.cn/zuiduanlu.html"/>
-    <id>https://lruihao.cn/zuiduanlu.html</id>
-    <published>2018-08-03T08:27:16.000Z</published>
-    <updated>2018-08-22T07:40:31.132Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="Dijkstra算法"><a href="#Dijkstra算法" class="headerlink" title="Dijkstra算法"></a>Dijkstra算法</h1><h2 id="1-定义概览"><a href="#1-定义概览" class="headerlink" title="1.定义概览"></a>1.定义概览</h2><p>Dijkstra(迪杰斯特拉)算法是典型的单源最短路径算法，用于计算一个节点到其他所有节点的最短路径。主要特点是以起始点为中心向外层层扩展，直到扩展到终点为止。Dijkstra算法是很有代表性的最短路径算法，在很多专业课程中都作为基本内容有详细的介绍，如数据结构，图论，运筹学等等。注意该算法要求图中不存在负权边。</p><p>问题描述：在无向图 G=(V,E) 中，假设每条边 E[i] 的长度为 w[i]，找到由顶点 V0 到其余各点的最短路径。（单源最短路径）</p><h2 id="2-算法描述"><a href="#2-算法描述" class="headerlink" title="2.算法描述"></a>2.算法描述</h2><h3 id="1-算法思想："><a href="#1-算法思想：" class="headerlink" title="1)算法思想："></a>1)算法思想：</h3><p>设G=(V,E)是一个带权有向图，把图中顶点集合V分成两组，第一组为已求出最短路径的顶点集合（用S表示，初始时S中只有一个源点，以后每求得一条最短路径 , 就将加入到集合S中，直到全部顶点都加入到S中，算法就结束了），第二组为其余未确定最短路径的顶点集合（用U表示），按最短路径长度的递增次序依次把第二组的顶点加入S中。在加入的过程中，总保持从源点v到S中各顶点的最短路径长度不大于从源点v到U中任何顶点的最短路径长度。此外，每个顶点对应一个距离，S中的顶点的距离就是从v到此顶点的最短路径长度，U中的顶点的距离，是从v到此顶点只包括S中的顶点为中间顶点的当前最短路径长度。</p><h3 id="2-算法步骤："><a href="#2-算法步骤：" class="headerlink" title="2)算法步骤："></a>2)算法步骤：</h3><p>a.初始时，S只包含源点，即S＝{v}，v的距离为0。U包含除v外的其他顶点，即:U={其余顶点}，若v与U中顶点u有边，则&lt;u,v&gt;正常有权值，若u不是v的出边邻接点，则&lt;u,v&gt;权值为∞。</p><p>b.从U中选取一个距离v最小的顶点k，把k，加入S中（该选定的距离就是v到k的最短路径长度）。</p><p>c.以k为新考虑的中间点，修改U中各顶点的距离；若从源点v到顶点u的距离（经过顶点k）比原来距离（不经过顶点k）短，则修改顶点u的距离值，修改后的距离值的顶点k的距离加上边上的权。</p><p>d.重复步骤b和c直到所有顶点都包含在S中。</p><p>执行动画过程如下图<br><img src="https://i.loli.net/2018/08/22/5b7d134a26755.gif" alt=""></p><h1 id="spfa算法"><a href="#spfa算法" class="headerlink" title="spfa算法"></a>spfa算法</h1><p>spfa是一种求单源最短路的算法</p><p>算法中需要用到的主要变量</p><p>int n; //表示n个点，从1到n标号</p><p>int s,t; //s为源点，t为终点</p><p>int d[N]; //d[i]表示源点s到点i的最短路</p><p>int p[N]; //记录路径（或者说记录前驱）</p><p>queue<int>q; //一个队列，用STL实现，当然可有手打队列，无所谓</int></p><p>bool vis[N]; //vis[i]=1表示点i在队列中 vis[i]=0表示不在队列中</p><h1 id="几乎所有的最短路算法其步骤都可以分为两步"><a href="#几乎所有的最短路算法其步骤都可以分为两步" class="headerlink" title="几乎所有的最短路算法其步骤都可以分为两步"></a>几乎所有的最短路算法其步骤都可以分为两步</h1><p>1.初始化</p><p>2.松弛操作</p><h2 id="初始化："><a href="#初始化：" class="headerlink" title="初始化："></a>初始化：</h2><p>d数组全部赋值为INF（无穷大）；p数组全部赋值为s（即源点），或者赋值为-1，表示还没有知道前驱,然后d[s]=0; 表示源点不用求最短路径，或者说最短路就是0。将源点入队；<br>（另外记住在整个算法中有顶点入队了要记得标记vis数组，有顶点出队了记得消除那个标记）</p><h2 id="队列-松弛操作"><a href="#队列-松弛操作" class="headerlink" title="队列+松弛操作"></a>队列+松弛操作</h2><p>读取队头顶点u，并将队头顶点u出队（记得消除标记）；将与点u相连的所有点v进行松弛操作，如果能更新估计值（即令d[v]变小），那么就更新，另外，如果点v没有在队列中，那么要将点v入队（记得标记），如果已经在队列中了，那么就不用入队</p><p>以此循环，直到队空为止就完成了单源最短路的求解</p><h1 id="SPFA可以处理负权边"><a href="#SPFA可以处理负权边" class="headerlink" title="SPFA可以处理负权边"></a>SPFA可以处理负权边</h1><p>定理: 只要最短路径存在，上述SPFA算法必定能求出最小值。</p><p>证明：<br>　　每次将点放入队尾，都是经过松弛操作达到的。换言之，每次的优化将会有某个点v的最短路径估计值d[v]变小。所以算法的执行会使d越来越小。由于我们假定图中不存在负权回路，所以每个结点都有最短路径值。因此，算法不会无限执行下去，随着d值的逐渐变小，直到到达最短路径值时，算法结束，这时的最短路径估计值就是对应结点的最短路径值。（证毕）</p><p>期望的时间复杂度O(ke)， 其中k为所有顶点进队的平均次数，可以证明k一般小于等于2。</p><p>判断有无负环：<br>　　如果某个点进入队列的次数超过N次则存在负环（SPFA无法处理带负环的图）</p><p><a href="https://www.cnblogs.com/cyd308/p/4470762.html" rel="external nofollow noopener noreferrer" target="_blank">代码</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;Dijkstra算法&quot;&gt;&lt;a href=&quot;#Dijkstra算法&quot; class=&quot;headerlink&quot; title=&quot;Dijkstra算法&quot;&gt;&lt;/a&gt;Dijkstra算法&lt;/h1&gt;&lt;h2 id=&quot;1-定义概览&quot;&gt;&lt;a href=&quot;#1-定义概览&quot; class=&quot;
       
     
     </summary>
