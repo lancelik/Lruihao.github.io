@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://lruihao.cn/"/>
-  <updated>2018-09-21T13:31:46.597Z</updated>
+  <updated>2018-09-22T14:37:14.327Z</updated>
   <id>https://lruihao.cn/</id>
   
   <author>
@@ -15,6 +15,60 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>linux/centos 下的安装git</title>
+    <link href="https://lruihao.cn/linux-git.html"/>
+    <id>https://lruihao.cn/linux-git.html</id>
+    <published>2018-09-22T14:28:45.000Z</published>
+    <updated>2018-09-22T14:37:14.327Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="下载git"><a href="#下载git" class="headerlink" title="下载git"></a>下载git</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://github.com/git/git/archive/v2.14.1.zip</span><br></pre></td></tr></table></figure><h3 id="安装依赖"><a href="#安装依赖" class="headerlink" title="安装依赖"></a>安装依赖</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum -y install zlib-devel openssl-devel cpio expat-devel gettext-devel curl-devel perl-ExtUtils-CBuilder perl-ExtUtils-MakeMaker</span><br></pre></td></tr></table></figure><h3 id="解压git"><a href="#解压git" class="headerlink" title="解压git"></a>解压git</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">unzip v2.14.1.zip</span><br></pre></td></tr></table></figure><p>注：<br>unzip命令用不了，具体步骤如下：<br></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#yum list | grep zip/unzip </span><br><span class="line">#yum install zip</span><br><span class="line">#yum install unzip</span><br></pre></td></tr></table></figure><p></p><p>基本完成，如果在编译的时候出现错误：<code>gcc : error trying to exec &#39;cc1plus&#39;: execvp : No sunch file or directory</code><br>可以用<code>gcc -v/g++ -v</code> 来查看gcc 版本，会发现没有安装。安装如下：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#yum list | grep gcc</span><br><span class="line">#yum install gcc-c++</span><br><span class="line">#yum install unzip</span><br></pre></td></tr></table></figure><h3 id="将git安装到-usr-local上"><a href="#将git安装到-usr-local上" class="headerlink" title="将git安装到/usr/local上"></a>将git安装到/usr/local上</h3><p>先进入git文件夹<br>编译<br>安装<br></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd git-2.14.1</span><br><span class="line">make prefix=/usr/local all</span><br><span class="line">make prefix=/usr/local install</span><br></pre></td></tr></table></figure><p></p><h3 id="验证是否安装完成"><a href="#验证是否安装完成" class="headerlink" title="验证是否安装完成"></a>验证是否安装完成</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git --version</span><br></pre></td></tr></table></figure><p>…</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;下载git&quot;&gt;&lt;a href=&quot;#下载git&quot; class=&quot;headerlink&quot; title=&quot;下载git&quot;&gt;&lt;/a&gt;下载git&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;
+      
+    
+    </summary>
+    
+      <category term="git" scheme="https://lruihao.cn/categories/git/"/>
+    
+    
+      <category term="git" scheme="https://lruihao.cn/tags/git/"/>
+    
+      <category term="linux" scheme="https://lruihao.cn/tags/linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>shadowsocks</title>
+    <link href="https://lruihao.cn/shadowsocks.html"/>
+    <id>https://lruihao.cn/shadowsocks.html</id>
+    <published>2018-09-22T14:20:34.000Z</published>
+    <updated>2018-09-22T14:28:20.846Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>搭建shadowsocks科学上网</p></blockquote><p>中秋放假当然不能闲着啦，虽然快没钱吃饭了，但还是到Vutrl买了服务器来玩，冲了5刀，一天多的饭钱啊。为了首冲优惠，还特意注册了个PayPal。</p><p>好，有了服务器自然先要翻个墙玩玩啦，所以<a href="http://blog.51cto.com/13756513/2118075" rel="external nofollow noopener noreferrer" target="_blank">传送门</a>。<br>翻墙后当然要访问个国外某某🔞网站啦，哈哈哈哈哈哈，开个玩笑开个玩笑😁😁😁</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;&lt;p&gt;搭建shadowsocks科学上网&lt;/p&gt;&lt;/blockquote&gt;&lt;p&gt;中秋放假当然不能闲着啦，虽然快没钱吃饭了，但还是到Vutrl买了服务器来玩，冲了5刀，一天多的饭钱啊。为了首冲优惠，还特意注册了个PayPal。&lt;/p&gt;&lt;p&gt;好，有了服务器自然
+      
+    
+    </summary>
+    
+      <category term="通用" scheme="https://lruihao.cn/categories/%E9%80%9A%E7%94%A8/"/>
+    
+    
+      <category term="通用" scheme="https://lruihao.cn/tags/%E9%80%9A%E7%94%A8/"/>
+    
+      <category term="科学上网" scheme="https://lruihao.cn/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/"/>
+    
+  </entry>
   
   <entry>
     <title>每一个优秀的人，都有一段沉默的时光</title>
@@ -105,9 +159,9 @@
       <category term="通用" scheme="https://lruihao.cn/categories/%E9%80%9A%E7%94%A8/"/>
     
     
-      <category term="termux" scheme="https://lruihao.cn/tags/termux/"/>
-    
       <category term="linux" scheme="https://lruihao.cn/tags/linux/"/>
+    
+      <category term="termux" scheme="https://lruihao.cn/tags/termux/"/>
     
       <category term="vim" scheme="https://lruihao.cn/tags/vim/"/>
     
@@ -493,59 +547,6 @@
       <category term="ACM" scheme="https://lruihao.cn/tags/ACM/"/>
     
       <category term="POJ" scheme="https://lruihao.cn/tags/POJ/"/>
-    
-      <category term="最短路" scheme="https://lruihao.cn/tags/%E6%9C%80%E7%9F%AD%E8%B7%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>hexo博客自定义console log</title>
-    <link href="https://lruihao.cn/console-log.html"/>
-    <id>https://lruihao.cn/console-log.html</id>
-    <published>2018-08-04T08:19:06.000Z</published>
-    <updated>2018-08-11T14:06:29.926Z</updated>
-    
-    <content type="html"><![CDATA[<p>看到知乎，百度的页面F12检查后都会有一些有趣的招聘信息。于是乎我也想给我的博客加一个。<br>我主要用到的工具：</p><ul><li>console.log()</li><li>Notepad++</li><li><a href="http://picascii.com" rel="external nofollow noopener noreferrer" target="_blank">在线图片转文字工具</a></li></ul><a id="more"></a><h2 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h2><p>用js在<code>&lt;body&gt;&lt;/body&gt;</code>使用console.log()就行了，hexo的主题文件在<code>_layout.swig</code>里，所以我们打开该文件，在该位置，添加js就行了；<br><img src="/console-log/console.png" alt="console"></p><h2 id="图案"><a href="#图案" class="headerlink" title="图案"></a>图案</h2><p>我用的我自己的一张照片(电脑上照片就那么几张。。。)，然后用<a href="http://picascii.com" rel="external nofollow noopener noreferrer" target="_blank">在线图片转文字工具</a>转字符，<br>选择文件，设置大小，然后生成，<img src="/console-log/QQ截图1.png" alt=""><br><img src="/console-log/QQ图片2.png" alt="">生成后，复制TXT文件（下面那个框，上面的是HTML代码）<br><img src="/console-log/QQ截图3.png" alt=""><br>粘贴到Notepad++里面，然后按图操作；<br><img src="/console-log/QQ截图4.png" alt=""><br>Ctrl+H 替换<br><img src="/console-log/QQ截图5.png" alt=""><br><img src="/console-log/QQ截图6.png" alt=""><br>最后就变成一个字符串了。</p><h2 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h2><p><img src="/console-log/QQ截图7.png" alt=""><br><a href="https://lruihao.cn">线上demo</a>,按F12找到console</p><h2 id="我的txt"><a href="#我的txt" class="headerlink" title="我的txt"></a>我的txt</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\n`              @@#``@@@@@@@@@@@@@@@@@@##,`   \n`              @@#`;@@@@@@@@@@@@@@@@@@@&apos;:&apos;   \n`              @@#`@@@@@@@@@@@@@@@@@@@#+#;`  \n`              @@#`@@@@@@@@@@@@@@@@@@###@&apos;.  \n`              @@+.@@@@@@@@@@@@@@@@@@@@@##,  \n`              @@#,@@@@@@@@@@@@@@@@@@@@@@#,  \n`              #@#:@@@@@@@@@@@@@@@@@@@@@@@,  \n`              #@#&apos;@@@@@@@@@@@@@@@@@@@@@@@.  \n`              +@#;@@@@@@@@@@@@@@@@@@@@@@#   \n`          `;: ;@#&apos;@@@@@@@@@@@@@@@@@@+&apos;+@&apos;   \n`    `,,;&apos;;&apos;+&apos;;&apos;@@+:@@@@@@@@@@@@##@#&apos;,.:#;   \n,, ``    ``..,:;@@#&apos;@@@@@@@@#####@@@@#:`:.   \n`       `````:++@@@@@@@@@@@@@###@@@@#+,..    \n        ``````.#@@@@@@@@@@@@@@#@@@#++#&apos;``    \n`    ```.,,:,.`:@@@@@@@@@@@@@###@@@##&apos;.`     \n``..`````..,::;+@@@@@@@@@@@@#+`::+##&apos;`.      \n`      ````.```,@@@@@@@@@@@##;``.,&apos;;` `      \n``.;@@@@@@@@@@@@@@@@@@@@@@###;``..``````     \n#@@@@@@@@@@@@@@@@@@@@@@@@##@#;``,``,.``      \n@@@@@@@@@@@@@@@@@@@.`````..``.. +` `:`       \n@+&apos;&apos;++#####@@#`.@@@``````` ` `,```  ``       \n&apos;;;;;&apos;+##+&apos;+.`;+@@@,..```` `` :,.            \n;::,,:;+#++``,,#@@@&apos;..``````` ,`.``          \n;,,,,...&apos;#.,,..#@@@#,,.`````` .````          \n:,,,,....`,::;&apos;&apos;+#@#;,..`````````.``         \n:,,,.....&apos;##++&apos;&apos;&apos;;:+&apos;:,.`..,,...`            \n:,,,...#####+&apos;+#@@@&apos;.&apos;;+:.  ` ``             \n;,,.`&apos;####&apos;#,`.`+@@@+&apos;``` `.`                \n;,.`#@@@#+:&apos;+++##+@##@,,,,`                  \n&apos;,.#@@###&apos;&apos;&apos;&apos;;:,.```,+#.                     \n+,#@@@####;,,..```````````````         `.:,::\n+@@@@###+;,,..``````````````````          `.,\n#@@@##+&apos;,,,........``````````````            \n@@@@#+:,,,,`........``````````               \n@@@#+:,,,,.`````.....``````````           `` \n@@##&apos;:,......`````....```  `````          ```\n@@@#&apos;:,....,..``````..````    ```         ```\n@@@#&apos;,....,,,..```````````     ```         ..\n@@@#,.....,,,,.``  ````````   ``````         \n@@@+....,,,,,..`````````````   ``````````    \n@@@:....,,,,.LiRuihao````````  ```````````` \n#@@,....,,,,.Always Be Yourself !````````````\n,##,,...,::,.````````````..``````   `......``\n,&apos;#,,..,,:::.`````````........``````   `.,,..\n\n你好！\n欢迎进入什么都不会的李瑞豪的个人网站！\nhttps://lruihao.cn\nhttps://www.lruihao.cn\nhttps://lruihao.github.io\nhttps://liruihao.coding.me\n\n\n\n</span><br></pre></td></tr></table></figure><p>其他个人网站，个人博客也是可以的。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;看到知乎，百度的页面F12检查后都会有一些有趣的招聘信息。于是乎我也想给我的博客加一个。&lt;br&gt;我主要用到的工具：&lt;/p&gt;&lt;ul&gt;&lt;li&gt;console.log()&lt;/li&gt;&lt;li&gt;Notepad++&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://picascii.com&quot; rel=&quot;external nofollow noopener noreferrer&quot; target=&quot;_blank&quot;&gt;在线图片转文字工具&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-    
-    </summary>
-    
-      <category term="hexo博客" scheme="https://lruihao.cn/categories/hexo%E5%8D%9A%E5%AE%A2/"/>
-    
-    
-      <category term="hexo博客" scheme="https://lruihao.cn/tags/hexo%E5%8D%9A%E5%AE%A2/"/>
-    
-      <category term="前端" scheme="https://lruihao.cn/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Til the Cows Come Home-poj2387(dijkstra判断重边)</title>
-    <link href="https://lruihao.cn/poj2387.html"/>
-    <id>https://lruihao.cn/poj2387.html</id>
-    <published>2018-08-03T13:40:33.000Z</published>
-    <updated>2018-08-04T02:35:12.575Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="http://poj.org/problem?id=2387" rel="external nofollow noopener noreferrer" target="_blank">题目链接</a></p><p>题目大意：<br>说的是，一只奶牛位于N号节点，输入N个节点和T对双向的边，求出由N到1的最短的距离，其实就是问的单源最短路问题。</p><p>两个点可能有多条路，选择最短的。<br></p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> INF=<span class="number">99999999</span>;                    <span class="comment">//设为无穷大</span></span><br><span class="line"><span class="keyword">int</span> maps[<span class="number">1005</span>][<span class="number">1005</span>],v[<span class="number">1005</span>],d[<span class="number">1005</span>];  <span class="comment">//v表示是否已经过遍历 d表示从源到点当前最短路</span></span><br><span class="line"><span class="keyword">int</span> n;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Dijkstra</span><span class="params">(<span class="keyword">int</span> s,<span class="keyword">int</span> t)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i,j,k,mini;</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">        d[i]=INF;                      <span class="comment">//除源点设为0距离外 其他先设为无穷大</span></span><br><span class="line">    d[s]=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">1</span>;i&lt;=n;i++)         <span class="comment">//n点循环n次 ,找出n个k,找n个点</span></span><br><span class="line">    &#123;</span><br><span class="line">        mini=INF;</span><br><span class="line">        k=<span class="number">-1</span>;</span><br><span class="line">        <span class="keyword">for</span>(j=<span class="number">1</span>;j&lt;=n;j++)              <span class="comment">//在所有未标记点中 选d值最小的点</span></span><br><span class="line">            <span class="keyword">if</span>(!v[j] &amp;&amp; d[j]&lt;mini)</span><br><span class="line">                mini=d[k=j];</span><br><span class="line"></span><br><span class="line">        v[k]=<span class="number">1</span>;                         <span class="comment">//标记节点</span></span><br><span class="line">        <span class="keyword">if</span>(k==t)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,d[t]);</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(j=<span class="number">1</span>;j&lt;=n;j++)</span><br><span class="line">            <span class="keyword">if</span>(!v[j] &amp;&amp; (d[k]+maps[k][j])&lt;d[j])   <span class="comment">//表示从k出发的点，对于所有边，更新相连点</span></span><br><span class="line">                d[j]=d[k]+maps[k][j];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> T,i,j,x,y,D;</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">scanf</span>(<span class="string">"%d %d"</span>,&amp;T,&amp;n)!=EOF)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">memset</span>(v,<span class="number">0</span>,<span class="keyword">sizeof</span>(v));            <span class="comment">//清除标记</span></span><br><span class="line">        <span class="keyword">for</span>(i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">            <span class="keyword">for</span>(j=<span class="number">1</span>;j&lt;=n;j++)</span><br><span class="line">                maps[i][j]=INF;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>(i=<span class="number">1</span>;i&lt;=T;i++)&#123;</span><br><span class="line">            <span class="built_in">scanf</span>(<span class="string">"%d%d%d"</span>,&amp;x,&amp;y,&amp;D);</span><br><span class="line">            <span class="keyword">if</span>(maps[x][y]&gt;D)               <span class="comment">//可能有多条路，只记录最短的</span></span><br><span class="line">                maps[x][y]=D,maps[y][x]=D;</span><br><span class="line">        &#125;</span><br><span class="line">        Dijkstra(<span class="number">1</span>,n);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;a href=&quot;http://poj.org/problem?id=2387&quot; rel=&quot;external nofollow noopener noreferrer&quot; target=&quot;_blank&quot;&gt;题目链接&lt;/a&gt;&lt;/p&gt;&lt;p&gt;题目大意：&lt;br&gt;说的是，一只奶牛位于N号
-      
-    
-    </summary>
-    
-      <category term="ACM" scheme="https://lruihao.cn/categories/ACM/"/>
-    
-      <category term="最短路" scheme="https://lruihao.cn/categories/ACM/%E6%9C%80%E7%9F%AD%E8%B7%AF/"/>
-    
-    
-      <category term="ACM" scheme="https://lruihao.cn/tags/ACM/"/>
     
       <category term="最短路" scheme="https://lruihao.cn/tags/%E6%9C%80%E7%9F%AD%E8%B7%AF/"/>
     

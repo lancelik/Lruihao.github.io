@@ -3,6 +3,50 @@
 
 
     
+  <url>
+    <loc>https://lruihao.cn/linux-git.html</loc>
+    <lastmod>2018-09-22T14:37:14.327Z</lastmod>
+    <data>
+        <display>
+        <title>linux/centos 下的安装git</title>
+        <pubTime>2018-09-22T14:28:45.000Z</pubTime>
+        
+        <tag>git</tag>
+         
+        <tag>linux</tag>
+         
+         
+           
+             
+              <breadCrumb title="git" url="https://lruihao.cn/categories/git/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://lruihao.cn/shadowsocks.html</loc>
+    <lastmod>2018-09-22T14:28:20.846Z</lastmod>
+    <data>
+        <display>
+        <title>shadowsocks</title>
+        <pubTime>2018-09-22T14:20:34.000Z</pubTime>
+        
+        <tag>通用</tag>
+         
+        <tag>科学上网</tag>
+         
+         
+           
+             
+              <breadCrumb title="通用" url="https://lruihao.cn/categories/%E9%80%9A%E7%94%A8/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
     
   <url>
     <loc>https://lruihao.cn/mood.html</loc>
@@ -246,9 +290,9 @@
         <title>linux系统进入退出vim编辑器及termux修改问候语</title>
         <pubTime>2018-08-31T03:46:39.000Z</pubTime>
         
-        <tag>termux</tag>
-         
         <tag>linux</tag>
+         
+        <tag>termux</tag>
          
         <tag>vim</tag>
          
@@ -1556,9 +1600,9 @@
         <title>TaoTao要吃鸡</title>
         <pubTime>2018-07-22T02:55:21.000Z</pubTime>
         
-        <tag>Nowcoder</tag>
-         
         <tag>背包问题</tag>
+         
+        <tag>Nowcoder</tag>
          
          
            
