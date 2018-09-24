@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://lruihao.cn/love/index.html</loc>
+    
+    <lastmod>2018-09-24T15:30:48.608Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://lruihao.cn/linux-git.html</loc>
     
     <lastmod>2018-09-22T14:37:14.327Z</lastmod>
@@ -124,20 +131,6 @@
     <loc>https://lruihao.cn/heart.html</loc>
     
     <lastmod>2018-08-29T11:18:51.581Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://lruihao.cn/love/index.html</loc>
-    
-    <lastmod>2018-08-28T02:12:29.780Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://lruihao.cn/diary/index.html</loc>
-    
-    <lastmod>2018-08-27T13:53:38.019Z</lastmod>
     
   </url>
   
