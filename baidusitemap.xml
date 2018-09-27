@@ -4,6 +4,50 @@
 
     
   <url>
+    <loc>https://lruihao.cn/bugs.html</loc>
+    <lastmod>2018-09-27T05:50:55.078Z</lastmod>
+    <data>
+        <display>
+        <title>BUG那些事</title>
+        <pubTime>2018-07-27T09:15:34.000Z</pubTime>
+        
+        <tag>BUG</tag>
+         
+        <tag>通用</tag>
+         
+         
+           
+             
+              <breadCrumb title="通用" url="https://lruihao.cn/categories/%E9%80%9A%E7%94%A8/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://lruihao.cn/night.html</loc>
+    <lastmod>2018-09-27T05:44:10.256Z</lastmod>
+    <data>
+        <display>
+        <title>网页夜间效果</title>
+        <pubTime>2018-09-27T05:13:31.000Z</pubTime>
+        
+        <tag>前端</tag>
+         
+        <tag>js</tag>
+         
+         
+           
+             
+              <breadCrumb title="前端" url="https://lruihao.cn/categories/%E5%89%8D%E7%AB%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://lruihao.cn/links.html</loc>
     <lastmod>2018-09-26T14:45:13.846Z</lastmod>
     <data>
@@ -202,28 +246,6 @@
 
     
   <url>
-    <loc>https://lruihao.cn/bugs.html</loc>
-    <lastmod>2018-09-01T03:04:40.219Z</lastmod>
-    <data>
-        <display>
-        <title>BUG那些事</title>
-        <pubTime>2018-07-27T09:15:34.000Z</pubTime>
-        
-        <tag>BUG</tag>
-         
-        <tag>通用</tag>
-         
-         
-           
-             
-              <breadCrumb title="通用" url="https://lruihao.cn/categories/%E9%80%9A%E7%94%A8/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://lruihao.cn/dongtaisub.html</loc>
     <lastmod>2018-09-01T03:01:26.074Z</lastmod>
     <data>
@@ -413,9 +435,9 @@
          
         <tag>数学</tag>
          
-        <tag>组合数学</tag>
-         
         <tag>Nowcoder</tag>
+         
+        <tag>组合数学</tag>
          
          
            
@@ -1623,9 +1645,9 @@
         <title>TaoTao要吃鸡</title>
         <pubTime>2018-07-22T02:55:21.000Z</pubTime>
         
-        <tag>Nowcoder</tag>
-         
         <tag>背包问题</tag>
+         
+        <tag>Nowcoder</tag>
          
          
            
@@ -1650,9 +1672,9 @@
         
         <tag>ACM</tag>
          
-        <tag>组合数学</tag>
-         
         <tag>Nowcoder</tag>
+         
+        <tag>组合数学</tag>
          
          
            
